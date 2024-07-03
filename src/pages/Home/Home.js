@@ -7,6 +7,10 @@ import Creator from './components/Creator';
 import { imgs } from '~/assets/images';
 import CreatorItem from '~/layout/components/CreatorItem/CreatorItem';
 import Community from './components/Community';
+import MeeCat from './components/MeeCat';
+import MeeCatItem from '~/layout/components/MeeCatItem';
+import Feature from './components/Feature';
+import Artist from '~/layout/components/Artist/Artist';
 
 function Home() {
     return (
@@ -66,6 +70,36 @@ function Home() {
                 />
             </Creator>
             <Community></Community>
+            <MeeCat>
+                <MeeCatItem img={imgs.MeeCat1} />
+                <MeeCatItem img={imgs.MeeCat2} />
+                <MeeCatItem img={imgs.MeeCat3} />
+                <MeeCatItem img={imgs.MeeCat4} />
+                <MeeCatItem img={imgs.MeeCat5} />
+                <MeeCatItem img={imgs.MeeCat6} />
+                <MeeCatItem img={imgs.MeeCat7} />
+                <MeeCatItem img={imgs.MeeCat8} />
+            </MeeCat>
+            <Feature>
+                <Artist
+                    head={imgs.Feature1}
+                    decor={imgs.FeatureHead1}
+                    name="Doruk Kumkumoğlu"
+                    nickname="@Doruk Kumkumoğlu"
+                />
+                <Artist
+                    head={imgs.Feature2}
+                    decor={imgs.FeatureHead2}
+                    name="Foysal Khan Shab"
+                    nickname="@Foysal Khan Shab"
+                />
+                <Artist
+                    head={imgs.Feature3}
+                    decor={imgs.FeatureHead3}
+                    name="Imar khan hasan"
+                    nickname="@Doruk Kumkumoğlu"
+                />
+            </Feature>
         </>
     );
 }

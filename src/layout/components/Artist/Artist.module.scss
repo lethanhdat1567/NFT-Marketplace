@@ -1,0 +1,132 @@
+@use '~/src/scss/abstracts/' as abs;
+.item {
+    border-radius: 10px;
+    position: relative;
+}
+.test {
+    height: 30%;
+}
+
+.heading-img {
+    width: 100%;
+    object-fit: cover;
+}
+.decor-img {
+    position: absolute;
+    top: -16%;
+    left: 18px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    @include abs.screen(xl) {
+        width: 60px;
+        height: 60px;
+        top: -10%;
+    }
+    @include abs.screen(md) {
+        width: 70px;
+        height: 70px;
+    }
+}
+.info {
+    background-color: #000000;
+    padding: 30px 26px;
+    border-radius: 0px 0px 20px 20px;
+    overflow: hidden;
+}
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    gap: 4px;
+    @include abs.screen(xl) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    @include abs.screen(md) {
+        flex-direction: row;
+    }
+}
+.user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.name {
+    font-size: 1.8rem;
+    font-weight: 500;
+    @include abs.screen(lg) {
+        font-size: 1.4rem;
+    }
+    @include abs.screen(md) {
+        font-size: 1.8rem;
+    }
+    @include abs.screen(sm) {
+        font-size: 1.4rem;
+    }
+}
+.nickname {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #a4a4a4;
+    @include abs.screen(lg) {
+        font-size: 1.2rem;
+    }
+    @include abs.screen(md) {
+        font-size: 1.5rem;
+    }
+    @include abs.screen(sm) {
+        font-size: 1.3rem;
+    }
+}
+.follow-btn {
+    padding: 10px 26px;
+    background-color: #0019fe;
+    border-radius: 999px;
+    @include abs.screen(xl) {
+        text-align: center;
+        width: 100%;
+    }
+    @include abs.screen(md) {
+        width: 172px;
+    }
+    @include abs.screen(sm) {
+        width: 112px;
+    }
+}
+.follow {
+    display: block;
+    width: 60px;
+    @include abs.screen(xl) {
+        width: 100%;
+    }
+}
+.subrice {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 31px;
+}
+.subrice-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.subrice-text {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #a4a4a4;
+}
+.desc {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #a4a4a4;
+    @include abs.screen(lg) {
+        font-size: 1.4rem;
+    }
+    @include abs.screen(md) {
+        font-size: 1.5rem;
+    }
+}
