@@ -1,0 +1,96 @@
+@use '~/src/scss/abstracts/' as abs;
+.inner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px 170px;
+    @include abs.screen(lg) {
+        margin: 0;
+    }
+}
+.title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+    @include abs.screen(md) {
+        font-size: 2.6rem;
+    }
+}
+.desc {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+    margin-bottom: 60px;
+    margin-top: 16px;
+    @include abs.screen(lg) {
+        font-size: 1.6rem;
+    }
+    @include abs.screen(md) {
+        width: min(370px, 100%);
+        font-size: 1.4rem;
+    }
+}
+.wrap-img {
+    position: relative;
+    padding-top: 87%;
+    display: flex;
+    flex-shrink: 0;
+    width: 100%;
+}
+.img-inner {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.decor {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-height: 706px;
+    max-width: 706px;
+}
+.decor-1,
+.decor-2,
+.decor-3,
+.decor-4,
+.decor-5 {
+    cursor: pointer;
+    position: absolute;
+    width: 25%;
+    transition: ease 0.4s;
+    &:hover {
+        transform: rotate(5deg);
+    }
+}
+
+.decor-1 {
+    left: 0;
+    top: 70px;
+}
+.decor-2 {
+    top: 70px;
+    left: 37%;
+}
+.decor-3 {
+    right: 0;
+    top: 70px;
+}
+.decor-4,
+.decor-5 {
+    bottom: 20%;
+    @include abs.screen(sm) {
+        bottom: 10%;
+    }
+}
+.decor-4 {
+    left: 24%;
+}
+.decor-5 {
+    right: 12%;
+}

@@ -1,0 +1,78 @@
+@use '~/src/scss/abstracts/' as abs;
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 270px;
+    padding: 28px;
+    background-color: #212127;
+    border-radius: 4px;
+    @include abs.screen(md) {
+        height: 200px;
+    }
+    @include abs.screen(sm) {
+        padding: 7px;
+        height: 157px;
+    }
+}
+.item-img {
+    height: 76px;
+    margin-bottom: 17px;
+    @include abs.screen(md) {
+        height: 44px;
+    }
+    @include abs.screen(sm) {
+        margin-bottom: 7px;
+    }
+}
+.name {
+    max-width: 161px;
+    font-size: 2rem;
+    font-weight: 700;
+    padding-bottom: 14px;
+    letter-spacing: 1px;
+    @include abs.screen(xl) {
+        font-size: 1.8rem;
+    }
+    @include abs.screen(md) {
+        font-size: 1.4rem;
+    }
+    @include abs.screen(sm) {
+        height: 32px;
+        font-size: 1.2rem;
+        padding-bottom: 8px;
+    }
+}
+.desc {
+    position: relative;
+    font-size: 1.4rem;
+    font-weight: 400;
+    padding-top: 14px;
+    &::after {
+        position: absolute;
+        content: '';
+        height: 1px;
+        left: 0;
+        right: 0;
+        top: 0;
+        background-color: #444444;
+    }
+    @include abs.screen(xl) {
+        font-size: 1.2rem;
+    }
+    @include abs.screen(lg) {
+        font-size: 1.5rem;
+        width: min(240px, 100%);
+    }
+    @include abs.screen(md) {
+        font-size: 1.2rem;
+    }
+    @include abs.screen(sm) {
+        font-size: 1.1rem;
+        padding-top: 7px;
+    }
+}
+.name,
+.desc {
+    text-align: center;
+}

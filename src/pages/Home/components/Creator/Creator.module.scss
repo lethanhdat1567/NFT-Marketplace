@@ -1,0 +1,16 @@
+@use '~/src/scss/abstracts/' as abs;
+
+.creator {
+    padding: 74px 0px;
+}
+.title {
+    font-size: 5rem;
+    font-weight: 500;
+    margin-bottom: 40px;
+    @include abs.screen(md) {
+        font-size: 4rem;
+    }
+    @include abs.screen(sm) {
+        font-size: 3rem;
+    }
+}

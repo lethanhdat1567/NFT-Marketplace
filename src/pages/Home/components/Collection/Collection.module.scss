@@ -1,0 +1,23 @@
+@use '~/src/scss/abstracts/' as abs;
+
+.collection {
+    padding: 66px 0px;
+}
+.heading-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.curated {
+    font-size: 4rem;
+    font-weight: 500;
+    @include abs.screen(lg) {
+        font-size: 3.5rem;
+    }
+    @include abs.screen(md) {
+        font-size: 1.6rem;
+    }
+    @include abs.screen(sm) {
+        font-size: 1.5rem;
+    }
+}

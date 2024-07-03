@@ -1,0 +1,39 @@
+@use '~/src/scss/abstracts/' as abs;
+.search-result {
+    width: 738px;
+
+    background-color: #191919;
+    overflow: auto;
+    border-radius: 4px;
+    @include abs.screen(xl) {
+        width: 500px;
+    }
+    // @include abs.screen(sm) {
+    //     width: 100%;
+    // }
+}
+.item-title {
+    padding: 20px 30px 10px;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+.search-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+}
+.search-wrap {
+    background-color: #181819;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    gap: 10px;
+}
+.search-input {
+    width: 100%;
+    margin-right: 18px;
+}
+.search-btn {
+    padding: 15px;
+}

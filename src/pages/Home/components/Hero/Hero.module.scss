@@ -1,0 +1,101 @@
+@use '~/src/scss/abstracts/' as abs;
+.hero {
+    margin: 60px 0px;
+}
+.wrap {
+    display: flex;
+    align-items: center;
+    @include abs.screen(lg) {
+        flex-direction: column;
+    }
+}
+.left {
+    width: 45%;
+    @include abs.screen(lg) {
+        width: 100%;
+        margin-bottom: 100px;
+    }
+}
+.sub-title {
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: #eaddb8;
+    margin-top: 58px;
+    @include abs.screen(lg) {
+        font-size: 2rem;
+    }
+    @include abs.screen(md) {
+        font-size: 1.5rem;
+    }
+}
+.heading {
+    font-size: 8rem;
+    font-weight: 600;
+    width: min(568px, 100%);
+    margin: 20px 0 18px 0;
+    @include abs.screen(xxl) {
+        font-size: 7rem;
+    }
+    @include abs.screen(xl) {
+        font-size: 6rem;
+    }
+    @include abs.screen(lg) {
+        font-size: 8rem;
+        width: 100%;
+    }
+    @include abs.screen(md) {
+        font-size: 5.5rem;
+        font-weight: 600;
+    }
+    @include abs.screen(sm) {
+        font-size: 4rem;
+    }
+}
+.desc {
+    width: min(488px, 100%);
+    font-size: 2rem;
+    font-weight: 400;
+    color: #cfcfcf;
+    margin-bottom: 40px;
+    @include abs.screen(md) {
+        font-size: 1.4rem;
+    }
+}
+.info {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+}
+.info-img {
+    width: 53px;
+    height: 53px;
+    @include abs.screen(md) {
+        width: 50px;
+        height: 50px;
+    }
+}
+.right {
+    width: 100%;
+    flex: 1;
+}
+.banner-inner {
+    display: flex;
+    overflow: hidden;
+
+    .banner-item {
+        position: relative;
+        flex-shrink: 0;
+        width: 100%;
+        padding-top: 71%;
+        left: -4%;
+    }
+
+    .banner-img {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        @include abs.screen(lg) {
+            left: -5%;
+        }
+    }
+}

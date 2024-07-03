@@ -1,0 +1,63 @@
+@use '~/src/scss/abstracts/' as abs;
+.search {
+    background-color: #181819;
+    border: 1.2px solid #bfbfbf;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    width: 400px;
+    overflow: hidden;
+    @include abs.screen(lg) {
+        display: none;
+    }
+}
+.search-btn {
+    padding: 13px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color ease 0.3s;
+    &:hover {
+        background-color: #363636;
+    }
+}
+.search-input {
+    width: 100%;
+    margin-right: 63px;
+    margin-left: 10px;
+    padding: 10px 0px;
+}
+.search-result {
+    width: 738px;
+    height: 557px;
+    background-color: #191919;
+    overflow: auto;
+    border-radius: 4px;
+}
+.item-title {
+    padding: 20px 30px 10px;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+// Mobile
+.search-mobile {
+    display: none;
+    align-items: center;
+    background-color: #0c0c0c;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    @include abs.screen(lg) {
+        display: flex;
+        margin-right: -170px;
+    }
+    @include abs.screen(md) {
+        margin-right: 0;
+    }
+}
+.search-btn-mobile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

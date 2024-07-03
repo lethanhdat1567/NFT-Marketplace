@@ -1,0 +1,85 @@
+@use '~/src/scss/abstracts/' as abs;
+
+.header {
+    padding: 24px 0px;
+    border-bottom: 1px solid #211f1f;
+}
+
+.inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 44px;
+    transition: ease 0.4s;
+    z-index: 10;
+
+    @include abs.screen(xl) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        display: block;
+        padding: 24px;
+        width: 50%;
+        translate: -100%;
+        background-color: #212127;
+        border-radius: 0px 10px 10px 0;
+        box-shadow: 7px 1px 40px 16px rgba(39, 39, 39, 0.48);
+    }
+    &.show {
+        translate: 0%;
+    }
+    &.show ~ .navbar-overlay {
+        display: block;
+    }
+    @include abs.screen(md) {
+        width: 80%;
+    }
+}
+.nav-back {
+    display: none;
+    padding: 10px 10px 10px 0px;
+    margin-bottom: 15px;
+    @include abs.screen(xl) {
+        display: block;
+    }
+}
+.nav-btn-con {
+    margin-top: 30px;
+    display: none !important;
+    border: 1px solid #fff !important;
+    @include abs.screen(md) {
+        display: inline-flex !important;
+    }
+}
+.navbar-btn {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    display: none;
+    @include abs.screen(xl) {
+        display: block;
+    }
+}
+.navbar-btn-imgs {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.header-btn {
+    @include abs.screen(md) {
+        display: none !important;
+    }
+}

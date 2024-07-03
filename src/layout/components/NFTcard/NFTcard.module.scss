@@ -1,0 +1,162 @@
+@use '~/src/scss/abstracts/' as abs;
+
+.item {
+    background-color: #212127;
+    padding: 20px 0px;
+    margin-top: 40px;
+    border-radius: 4px;
+    @include abs.screen(lg) {
+        margin: 40px 100px 0px 100px;
+    }
+    @include abs.screen(md) {
+        margin: 40px 0px 0px 0px;
+    }
+}
+.info {
+    display: flex;
+    align-items: center;
+    margin-left: 22px;
+    margin-bottom: 20px;
+    gap: 5px;
+}
+.avatar {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+.name {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+.product {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+
+    &:hover {
+        .sidebar {
+            opacity: 1;
+            visibility: visible;
+        }
+        .product-img {
+            transform: scale(1.1);
+        }
+    }
+    .sidebar {
+        transition: ease 0.6s;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        right: 0;
+        top: 5%;
+        width: 90px;
+        height: 332px;
+        background-color: #212127;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 32px;
+        gap: 55px;
+        @include abs.screen(xxl) {
+            gap: 35px;
+        }
+        @include abs.screen(xl) {
+            gap: 55px;
+        }
+        @include abs.screen(sm) {
+            gap: 30px;
+            height: 260px;
+        }
+    }
+    .sidebar-avatar {
+        width: 44px;
+        height: 44px;
+        .avatar-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .favor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 7px;
+        .favor-total {
+            font-size: 1.8rem;
+            font-weight: 400;
+        }
+    }
+    .share {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 7px;
+    }
+}
+
+.product-img {
+    width: 100%;
+    object-fit: cover;
+    transform: scale(1);
+    transition: ease 0.4s;
+}
+.product-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 22px;
+}
+.product-sub {
+    margin: 12px 0px 7px 0px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #b6b6b6;
+}
+.product-title {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+.status {
+    font-size: 1.5rem;
+    font-weight: 400;
+
+    color: #b6b6b6;
+}
+.buy {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 12px 22px 0px 22px;
+}
+.buy-user {
+    display: flex;
+    align-items: center;
+}
+.buy-avatar + .buy-avatar {
+    border-radius: 50%;
+    border: 1px solid #212127;
+    margin-left: -10px;
+}
+.buy-avatar {
+    @include abs.screen(xxl) {
+        width: 30px;
+        height: 30px;
+        margin-left: -5px !important;
+    }
+    @include abs.screen(md) {
+        width: 20px;
+        height: 20px;
+        margin-left: -5px !important;
+    }
+}
+.time {
+    font-size: 1.5rem;
+    font-weight: 400;
+    @include abs.screen(md) {
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+}

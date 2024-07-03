@@ -1,0 +1,140 @@
+@use '~/src/scss/abstracts/' as abs;
+.item {
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 650px;
+    padding: 38px;
+    margin-top: 60px;
+    border-radius: 4px;
+    @include abs.screen(xl) {
+        height: 450px;
+    }
+    @include abs.screen(lg) {
+        height: 610px;
+    }
+    @include abs.screen(sm) {
+        height: 350px;
+    }
+    .name {
+        font-size: 3.4rem;
+        font-weight: 600;
+        line-height: 46px;
+        width: min(447px, 100%);
+        letter-spacing: 8px;
+        @include abs.screen(lg) {
+            font-size: 2.8rem;
+        }
+        @include abs.screen(md) {
+            font-size: 2.4rem;
+        }
+        @include abs.screen(sm) {
+            letter-spacing: 2px;
+            font-size: 2rem;
+            line-height: 30px;
+        }
+    }
+    .user {
+        display: flex;
+        align-items: center;
+        width: 166px;
+        gap: 8px;
+        padding: 12px 10px;
+        border-radius: 33px;
+        background: #0000009e;
+        transition: ease 0.4s;
+        margin-top: 17px;
+        font-weight: 600;
+    }
+    .user-name {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    .user-img {
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+    }
+    .info {
+        position: absolute;
+        transition: ease 0.3s;
+        bottom: -100%;
+        left: 37px;
+        right: 37px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #f6f6f633;
+
+        backdrop-filter: blur(30px);
+        padding: 30px;
+        @include abs.screen(sm) {
+            left: 10px;
+            right: 10px;
+        }
+    }
+    .info-desc {
+        font-size: 1.6rem;
+        font-weight: 400;
+        margin-bottom: 15px;
+        @include abs.screen(md) {
+            font-size: 1.2rem;
+        }
+    }
+    .number,
+    .total {
+        font-size: 2.4rem;
+        font-weight: 500;
+        @include abs.screen(md) {
+            font-size: 2rem;
+        }
+        @include abs.screen(sm) {
+            font-size: 1.6rem;
+        }
+    }
+    .img-wrap {
+        display: flex;
+    }
+    .img-user {
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+        margin-left: -5px;
+        border-radius: 50%;
+        border: 1px solid #81bc7c;
+        @include abs.screen(md) {
+            width: 25px;
+            height: 25px;
+        }
+    }
+    &:hover {
+        .info {
+            bottom: 30px;
+        }
+        .background {
+            transform: scale(1.1);
+        }
+        .user {
+            background-color: #d9d9d945;
+            backdrop-filter: blur(50px);
+        }
+    }
+}
+.background {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    transform: scale(1);
+    transition: ease 0.4s;
+}
+.background-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}

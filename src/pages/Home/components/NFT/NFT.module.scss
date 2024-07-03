@@ -1,0 +1,104 @@
+@use '~/src/scss/abstracts/' as abs;
+.NFT {
+    margin-bottom: 94px;
+}
+.inner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.heading {
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 500;
+    max-width: 524px;
+    margin-bottom: 60px;
+    @include abs.screen(lg) {
+        font-size: 4rem;
+    }
+    @include abs.screen(md) {
+        font-size: 3rem;
+    }
+}
+.nav-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 18px;
+    &::after {
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        background-color: #2d2c2c;
+        bottom: 0;
+    }
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #d2d2d2;
+    @include abs.screen(md) {
+        gap: 16px;
+    }
+}
+.order {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    @include abs.screen(md) {
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+}
+.nft,
+.desc,
+.short,
+.order {
+    @include abs.screen(md) {
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+    &::after {
+        transition: ease 0.4s;
+        content: '';
+        z-index: 1;
+        position: absolute;
+        width: 0;
+        height: 1px;
+        background-color: #009740;
+        bottom: -18px;
+        left: 0;
+    }
+    &:hover {
+        &::after {
+            width: 100%;
+        }
+
+        text-shadow: 1px 0px #ffffff;
+    }
+    cursor: pointer;
+    position: relative;
+    &.active {
+        &::after {
+            width: 100%;
+        }
+        text-shadow: 1px 0px #ffffff;
+    }
+}
+.items {
+    width: 100%;
+}
+.item-wrapper {
+    margin: 0px 70px;
+    @include abs.screen(lg) {
+        margin: 0 !important;
+    }
+}
