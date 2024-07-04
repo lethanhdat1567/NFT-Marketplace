@@ -1,0 +1,87 @@
+@use '~/src/scss/abstracts/' as abs;
+.comment {
+    padding: 140px 0px;
+}
+.title {
+    font-size: 5rem;
+    font-weight: 500;
+    margin-bottom: 60px;
+    @include abs.screen(md) {
+        font-size: 3rem;
+    }
+    @include abs.screen(sm) {
+        font-size: 2rem;
+    }
+}
+.comment-wrap {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: min(1170px, 100%);
+    overflow: hidden;
+}
+.slice-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.item {
+    width: 50px;
+    height: 8px;
+    border-radius: 5px;
+    background-color: #0f0f0f;
+    @include abs.screen(sm) {
+        width: 30px;
+    }
+}
+.item.active {
+    background-color: #424141;
+}
+.slice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+.wrap-btn {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.right-img {
+    transform: rotate(180deg);
+}
+.arrow-left,
+.arrow-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background-color: #212127;
+    transition: ease 0.4s;
+    &:hover {
+        background-color: #04f7b0;
+        .left-img,
+        .right-img {
+            filter: brightness(0) saturate(100%) invert(0%) sepia(98%) saturate(7%) hue-rotate(28deg) brightness(97%)
+                contrast(100%);
+        }
+    }
+    @include abs.screen(sm) {
+        width: 30px;
+        height: 30px;
+    }
+}
+.left-img,
+.right-img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    transition: ease 0.4s;
+    @include abs.screen(sm) {
+        width: 16px;
+        height: 16px;
+    }
+}

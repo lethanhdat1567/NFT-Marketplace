@@ -40,4 +40,8 @@ export const imgs = {
     Feature1: require('./imgs/feature1.png'),
     Feature2: require('./imgs/feature2.png'),
     Feature3: require('./imgs/feature3.png'),
+    arrowComment: require('./imgs/arrowComment.png'),
+    avatarComment: require('./imgs/avatarComment.png'),
+    avatarComment1: require('./imgs/avatarComment1.png'),
+    subscribe: require('./imgs/subcribe.png'),
 };

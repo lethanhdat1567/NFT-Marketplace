@@ -1,6 +1,9 @@
 @use '~/src/scss/abstracts/' as abs;
 .hero {
-    margin: 60px 0px;
+    margin: 90px 0px 100px 0px;
+    @include abs.screen(lg) {
+        margin: 60px 0;
+    }
 }
 .wrap {
     display: flex;

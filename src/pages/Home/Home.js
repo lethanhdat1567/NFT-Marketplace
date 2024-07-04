@@ -11,6 +11,9 @@ import MeeCat from './components/MeeCat';
 import MeeCatItem from '~/layout/components/MeeCatItem';
 import Feature from './components/Feature';
 import Artist from '~/layout/components/Artist/Artist';
+import Comment from './components/Comment';
+import CommentItem from '~/layout/components/CommentItem';
+import Subscribe from './components/Subscribe';
 
 function Home() {
     return (
@@ -100,6 +103,13 @@ function Home() {
                     nickname="@Doruk Kumkumoğlu"
                 />
             </Feature>
+            <Comment>
+                <CommentItem name="Philip Colbert" avatar={imgs.avatarComment} />
+                <CommentItem name="Robart Foden" avatar={imgs.avatarComment1} />
+                <CommentItem name="Philip Colbert" avatar={imgs.avatarComment} />
+                <CommentItem name="Robart Foden" avatar={imgs.avatarComment1} />
+            </Comment>
+            <Subscribe></Subscribe>
         </>
     );
 }

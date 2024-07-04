@@ -1,5 +1,5 @@
 @use 'sass:math';
-
+@use '~/src/scss/abstracts/' as abs;
 // Breakpoints, dimension, container, row, column, v.v
 $grid-breakpoints: (
     xxl: 1400px,

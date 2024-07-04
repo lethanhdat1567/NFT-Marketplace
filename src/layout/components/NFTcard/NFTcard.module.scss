@@ -36,8 +36,7 @@
 
     &:hover {
         .sidebar {
-            opacity: 1;
-            visibility: visible;
+            transform: translateX(0);
         }
         .product-img {
             transform: scale(1.1);
@@ -45,28 +44,33 @@
     }
     .sidebar {
         transition: ease 0.6s;
-        opacity: 0;
-        visibility: hidden;
+        transform: translateX(100%);
         position: absolute;
         right: 0;
         top: 5%;
         width: 90px;
-        height: 332px;
+        height: 265px;
         background-color: #212127;
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 32px;
-        gap: 55px;
+        gap: 30px;
+        border-radius: 10px 0px 0px 10px;
         @include abs.screen(xxl) {
             gap: 35px;
         }
         @include abs.screen(xl) {
             gap: 55px;
+            height: 320px;
+        }
+        @include abs.screen(lg) {
+            gap: 55px;
+            height: 322px;
         }
         @include abs.screen(sm) {
             gap: 30px;
-            height: 260px;
+            height: 280px;
         }
     }
     .sidebar-avatar {

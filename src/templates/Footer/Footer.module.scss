@@ -1,0 +1,96 @@
+@use '~/src/scss/abstracts/' as abs;
+
+.footer {
+    position: relative;
+    padding: 40px 0px 80px 0px;
+    background-color: #212127;
+}
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include abs.screen(md) {
+        justify-content: space-around;
+    }
+}
+.list {
+    display: flex;
+    align-items: center;
+    gap: 44px;
+    @include abs.screen(md) {
+        display: none;
+    }
+}
+.list-mobile {
+    display: none;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 44px;
+    margin-top: 20px;
+
+    @include abs.screen(md) {
+        display: flex;
+    }
+}
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.item {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #fdfdfd;
+}
+.icon {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+}
+.icon-img {
+    width: 100%;
+    height: 100%;
+}
+.separate {
+    position: absolute;
+    content: '';
+    top: 45%;
+    height: 1px;
+    width: 100%;
+    background-color: #595959;
+}
+.under {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 81px;
+    width: 60%;
+    gap: 32px;
+    @include abs.screen(xl) {
+        width: 70%;
+    }
+    @include abs.screen(lg) {
+        width: 90%;
+    }
+    @include abs.screen(md) {
+        flex-direction: column;
+    }
+}
+.under-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    @include abs.screen(md) {
+        width: 100%;
+    }
+}
+.under-item {
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-decoration: underline;
+    @include abs.screen(sm) {
+        font-size: 1.2rem;
+    }
+}
