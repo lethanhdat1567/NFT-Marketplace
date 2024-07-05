@@ -6,7 +6,8 @@
     height: 100%;
     justify-content: center;
     margin-left: 50px;
-    @include abs.screen(sm) {
+    @include abs.screen(lg) {
+        margin-left: 0;
     }
 }
 .artwork {
@@ -14,6 +15,9 @@
 }
 .header {
     margin: 0px 66px;
+    @include abs.screen(md) {
+        margin: 0;
+    }
 }
 .banner {
     display: flex;
@@ -28,10 +32,15 @@
     position: absolute;
     top: 0;
     width: 100%;
+    border-radius: 4px;
 }
 .title {
     font-size: 5rem;
     font-weight: 500;
+    @include abs.screen(lg) {
+        text-align: center;
+        font-size: 4rem;
+    }
 }
 .sub-title {
     display: block;
@@ -39,6 +48,13 @@
     color: #c7c7c7;
     font-weight: 400;
     margin: 14px 0px 43px 0px;
+    @include abs.screen(lg) {
+        text-align: center;
+    }
+    @include abs.screen(md) {
+        font-size: 1.6rem;
+        margin-bottom: 30px;
+    }
 }
 
 .user {
@@ -50,6 +66,13 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 34px;
+    @include abs.screen(lg) {
+        justify-content: space-around;
+    }
+    @include abs.screen(sm) {
+        justify-content: center;
+        gap: 50px;
+    }
 }
 .price-wrapper {
     position: relative;
@@ -61,23 +84,44 @@
         bottom: 0;
         left: 150%;
         background-color: #3c3c3c;
+        @include abs.screen(xl) {
+            left: 115%;
+        }
+        @include abs.screen(lg) {
+            left: 150%;
+        }
+        @include abs.screen(md) {
+            left: 144%;
+        }
+        @include abs.screen(sm) {
+            left: 120%;
+        }
     }
 
     .price-desc {
         font-size: 1.7rem;
         font-weight: 400;
         color: #c7c7c7;
+        @include abs.screen(sm) {
+            font-size: 1.4rem;
+        }
     }
     .price-title {
         display: inline-block;
         font-size: 3rem;
         font-weight: 500;
         margin: 14px 0px;
+        @include abs.screen(sm) {
+            font-size: 2rem;
+        }
     }
     .price {
         font-size: 1.7rem;
         font-weight: 400;
         color: #c7c7c7;
+        @include abs.screen(sm) {
+            font-size: 1.4rem;
+        }
     }
 }
 .Owner {
@@ -85,6 +129,9 @@
     font-weight: 400;
     color: #c7c7c7;
     margin-bottom: 23px;
+    @include abs.screen(sm) {
+        font-size: 1.4rem;
+    }
 }
 .user-btn {
     display: flex;
@@ -110,6 +157,72 @@
         .btn-img {
             filter: brightness(0) saturate(100%) invert(0%) sepia(85%) saturate(7500%) hue-rotate(315deg)
                 brightness(77%) contrast(112%);
+        }
+    }
+}
+.artwork-dropdown {
+    margin-top: 10px;
+    border-radius: 4px;
+    width: 188px;
+    padding: 20px 16px;
+    background-color: #191919;
+}
+.artwork-list {
+    .artwork-iten {
+        padding: 7px 0px;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: #dbdbdb;
+        cursor: pointer;
+        transition: ease 0.4s;
+        &:hover {
+            color: #17e3a6;
+        }
+    }
+}
+.content-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 80px;
+    margin-bottom: 60px;
+    .content-title {
+        font-size: 3.8rem;
+        font-weight: 500;
+        @include abs.screen(md) {
+            font-size: 3rem;
+        }
+        @include abs.screen(sm) {
+            font-size: 2rem;
+        }
+    }
+    .content-sort {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+    .sort-btn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        transition: ease 0.4s;
+        &:hover {
+            color: #17e3a6;
+        }
+    }
+    .sort-desc,
+    .sort-btn {
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: #d2d2d2;
+        @include abs.screen(sm) {
+            font-size: 1.5rem;
+        }
+    }
+    .sort-desc {
+        @include abs.screen(sm) {
+            display: none;
         }
     }
 }

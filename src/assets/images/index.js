@@ -46,4 +46,6 @@ export const imgs = {
     subscribe: require('./imgs/subcribe.png'),
     ArtworkBanner: require('./imgs/ArtworkBanner.png'),
     ArtworkBtn: require('./imgs/ArtworkBtn.png'),
+    ArtworkItem: require('./imgs/ArtworkItem.png'),
+    aboutBanner: require('./imgs/aboutBanner.png'),
 };

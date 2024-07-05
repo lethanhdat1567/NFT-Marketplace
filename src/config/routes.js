@@ -3,5 +3,6 @@ const routes = {
     collection: '/collection',
     community: '/community',
     artwork: '/artwork',
+    aboutUs: '/aboutus',
 };
 export default routes;
