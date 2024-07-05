@@ -44,4 +44,6 @@ export const imgs = {
     avatarComment: require('./imgs/avatarComment.png'),
     avatarComment1: require('./imgs/avatarComment1.png'),
     subscribe: require('./imgs/subcribe.png'),
+    ArtworkBanner: require('./imgs/ArtworkBanner.png'),
+    ArtworkBtn: require('./imgs/ArtworkBtn.png'),
 };

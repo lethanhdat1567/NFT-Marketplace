@@ -1,7 +1,7 @@
 const routes = {
     home: '/',
     collection: '/collection',
-    explor: '/explore',
     community: '/community',
+    artwork: '/artwork',
 };
 export default routes;
