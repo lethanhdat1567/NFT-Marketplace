@@ -1,6 +1,8 @@
 import { imgs } from '~/assets/images';
 import styles from './AboutUs.module.scss';
 import classNames from 'classnames/bind';
+import UserItem from '~/layout/components/UserItem';
+import Subscribe from '../Home/components/Subscribe';
 
 const cx = classNames.bind(styles);
 
@@ -21,6 +23,11 @@ function AboutUs() {
                             <div className="col col-7">
                                 <div className={cx('info')}>
                                     <h2 className={cx('title')}>We believe in the power of creators.</h2>
+                                    <div className={cx('banner-respon-wrap')}>
+                                        <figure className={cx('banner-respon')}>
+                                            <img className={cx('banner-img-respone')} src={imgs.AboutRespon} />
+                                        </figure>
+                                    </div>
                                     <p className={cx('info-desc')}>
                                         Web3 is changing the world as we know it.
                                         <br />
@@ -43,10 +50,18 @@ function AboutUs() {
                     </div>
                     <div className={cx('team')}>
                         <h2 className={cx('team-title')}>Our team</h2>
-                        <div className="row row-cols-3"></div>
+                        <div className="row row-cols-3 row-cols-lg-2 row-cols-md-1 gy-3">
+                            <UserItem />
+                            <UserItem />
+                            <UserItem />
+                            <UserItem />
+                            <UserItem />
+                            <UserItem />
+                        </div>
                     </div>
                 </div>
             </div>
+            <Subscribe banner={imgs.subAbout}></Subscribe>
         </div>
     );
 }

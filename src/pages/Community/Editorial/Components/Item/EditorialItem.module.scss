@@ -1,0 +1,52 @@
+@use '~/src/scss/abstracts/' as abs;
+
+.item {
+    border-radius: 6px;
+    overflow: hidden;
+}
+.banner {
+    display: flex;
+    overflow: hidden;
+    .banner-inner {
+        position: relative;
+        flex-shrink: 0;
+        padding-top: 100%;
+        width: 100%;
+    }
+    .banner-img {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        object-fit: cover;
+    }
+}
+.info {
+    border: 1px solid #161616;
+    text-align: center;
+    padding: 16px 0px;
+    border-radius: 6px;
+    .name {
+        font-size: 2.4rem;
+        font-weight: 500;
+        margin-bottom: 12px;
+        @include abs.screen(xl) {
+            font-size: 2rem;
+        }
+
+        @include abs.screen(md) {
+            font-size: 2.2rem;
+        }
+    }
+    .desc {
+        font-size: 1.6rem;
+        font-weight: 300;
+        margin: 0px 10px;
+        @include abs.screen(xl) {
+            font-size: 1.6rem;
+        }
+        @include abs.screen(md) {
+            font-size: 1.8rem;
+            font-weight: 300;
+        }
+    }
+}

@@ -10,6 +10,9 @@
         font-size: 5rem;
         font-weight: 500;
         margin-bottom: 18px;
+        @include abs.screen(lg) {
+            font-size: 6rem;
+        }
         @include abs.screen(md) {
             font-size: 4rem;
         }
@@ -22,6 +25,9 @@
         font-size: 2rem;
         color: #cfcfcf;
         width: min(550px, 100%);
+        @include abs.screen(lg) {
+            font-size: 2.4rem;
+        }
         @include abs.screen(md) {
             font-size: 1.8rem;
         }
@@ -35,9 +41,15 @@
         font-size: 3rem;
         font-weight: 500;
         margin-bottom: 24px;
+        @include abs.screen(lg) {
+            font-size: 4rem;
+        }
+        @include abs.screen(md) {
+            font-size: 3rem;
+        }
     }
     .info-desc {
-        font-size: 20px;
+        font-size: 2rem;
         font-weight: 400;
         color: #cfcfcf;
         line-height: 3rem;
@@ -45,9 +57,42 @@
 }
 .banner {
     width: 100%;
+    @include abs.screen(lg) {
+        display: none;
+    }
     .banner-img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+}
+.banner-respon-wrap {
+    display: flex;
+}
+.banner-respon {
+    display: none;
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+    padding-top: 80%;
+    @include abs.screen(lg) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .banner-img-respone {
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
+.team {
+    padding: 150px 0px;
+    text-align: center;
+    .team-title {
+        margin-bottom: 60px;
+
+        font-size: 5rem;
+        font-weight: 500;
     }
 }

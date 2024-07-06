@@ -9,6 +9,7 @@ import Button from '~/layout/components/Button';
 import MenuItem from './components/MenuItem/MenuItem';
 import { arrowLeft } from '~/assets/icons';
 import { useState } from 'react';
+import DropdownConnect from '~/layout/components/DropdownConnect';
 
 const cx = classNames.bind(styles);
 
@@ -51,6 +52,7 @@ function Header() {
                     <div onClick={() => setShowNavbar(false)} className={cx('navbar-overlay')}></div>
                 </div>
             </div>
+            <DropdownConnect></DropdownConnect>
         </header>
     );
 }

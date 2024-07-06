@@ -92,7 +92,7 @@ function Artwork() {
                     </div>
                 </div>
             </div>
-            <Subscribe></Subscribe>
+            <Subscribe banner={imgs.subscribe}></Subscribe>
         </>
     );
 }

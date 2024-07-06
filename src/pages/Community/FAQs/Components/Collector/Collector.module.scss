@@ -1,0 +1,104 @@
+@use '~/src/scss/abstracts/' as abs;
+.wrapper-item {
+    overflow: hidden;
+    background-color: #191919;
+    border-radius: 4px;
+    &.active {
+        border-left: 1px solid #17e3a6;
+        .info {
+            height: 100%;
+        }
+    }
+}
+.item-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.inner {
+    margin-bottom: 60px;
+    .title {
+        font-size: 3rem;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+}
+.item {
+    padding: 26px;
+    overflow: hidden;
+    @include abs.screen(sm) {
+        padding: 10px;
+    }
+    .heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include abs.screen(sm) {
+            flex-direction: row-reverse;
+            gap: 20px;
+        }
+    }
+    .title-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 57px;
+        .ranked,
+        .title-item {
+            font-size: 2rem;
+            font-weight: 500;
+            @include abs.screen(sm) {
+                line-height: 3rem;
+            }
+        }
+        .ranked {
+            @include abs.screen(sm) {
+                display: none;
+            }
+        }
+    }
+    .more-btn {
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        border-radius: 50%;
+        border: 1px solid #383838;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .more-minus,
+        .more-plus {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+        }
+        .more-minus {
+            display: none;
+        }
+        &.active {
+            .more-minus {
+                display: inline-block;
+            }
+            .more-plus {
+                display: none;
+            }
+        }
+    }
+}
+.info {
+    height: 0;
+    .desc {
+        font-size: 1.7rem;
+        margin: 0px 113px 30px 108px;
+        font-weight: 400;
+        color: #8c8c8c;
+        line-height: 3rem;
+        @include abs.screen(md) {
+            margin: 0px 75px 30px 108px;
+        }
+        @include abs.screen(sm) {
+            margin: 0px 10px 0px 70px;
+        }
+    }
+}

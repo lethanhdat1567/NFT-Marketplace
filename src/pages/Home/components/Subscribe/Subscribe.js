@@ -5,7 +5,7 @@ import { imgs } from '~/assets/images';
 import { arrowRight } from '~/assets/icons';
 const cx = classNames.bind(styles);
 
-function Subscribe() {
+function Subscribe({ banner }) {
     return (
         <div className={cx('subscribe')}>
             <div className="container">
@@ -29,7 +29,7 @@ function Subscribe() {
                         <div className="col">
                             <div className={cx('banner')}>
                                 <div className={cx('banner-inner')}>
-                                    <img src={imgs.subscribe} className={cx('banner-img')} />
+                                    <img src={banner} className={cx('banner-img')} />
                                 </div>
                             </div>
                         </div>

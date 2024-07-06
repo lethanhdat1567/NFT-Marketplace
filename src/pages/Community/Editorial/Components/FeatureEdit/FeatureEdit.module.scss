@@ -1,0 +1,46 @@
+@use '~/src/scss/abstracts/' as abs;
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.feature {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 140px;
+    @include abs.screen(md) {
+        align-items: center;
+        gap: 10px;
+    }
+}
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    .title {
+        font-size: 5rem;
+        font-weight: 500;
+        @include abs.screen(lg) {
+            font-size: 4rem;
+        }
+        @include abs.screen(md) {
+            text-align: center;
+            line-height: 4rem;
+        }
+    }
+}
+.respon {
+    display: none;
+    @include abs.screen(md) {
+        display: block;
+        margin-top: 20px;
+        font-size: 2.2rem;
+    }
+}
+.main {
+    @include abs.screen(md) {
+        display: none;
+    }
+}

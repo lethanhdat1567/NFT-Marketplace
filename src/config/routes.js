@@ -4,5 +4,8 @@ const routes = {
     community: '/community',
     artwork: '/artwork',
     aboutUs: '/aboutus',
+    Artists: '/artists',
+    Editor: '/editorial',
+    FAQs: '/faqs',
 };
 export default routes;

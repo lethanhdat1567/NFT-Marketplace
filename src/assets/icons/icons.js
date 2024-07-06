@@ -177,7 +177,20 @@ export const MeeCatIcon = () => (
 );
 export const arrowRight = () => (
     <svg width="100%" height="100%" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1 10H23" stroke="black" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M14 1L23 10L14 19" stroke="black" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M1 10H23" stroke="#fff" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M14 1L23 10L14 19" stroke="#fff" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+);
+export const minus = () => (
+    <svg width={'100%'} height={'100%'} viewBox="0 0 14 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.58173 3.51443H14V0.48558H8.58173H5.41827H0V3.51443H5.41827H8.58173Z" fill="#17E3A6" />
+    </svg>
+);
+export const plus = () => (
+    <svg width={'100%'} height={'100%'} viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+            d="M8.58173 14V8.51442H14V5.48558H8.58173V0H5.41827V5.48558H0V8.51442H5.41827V14H8.58173Z"
+            fill="#17E3A6"
+        />
     </svg>
 );
