@@ -60,7 +60,7 @@
     margin-left: 8px;
 }
 .icon {
-    display: inline-block;
-    width: 24px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

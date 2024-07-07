@@ -1,0 +1,55 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 100px;
+    width: min(956px, 100%);
+    .item {
+        .title {
+            width: min(631px, 100%);
+            font-size: 3rem;
+            font-weight: 500;
+            margin-bottom: 60px;
+        }
+        .desc {
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 3rem;
+            color: #acacac;
+            width: min(752px, 100%);
+        }
+        .mark {
+            font-weight: 500;
+            background-color: transparent;
+            color: #fff;
+            margin-right: 4px;
+        }
+        .banner {
+            display: flex;
+            overflow: hidden;
+            margin-bottom: 40px;
+            .banner-inner {
+                position: relative;
+                padding-top: 37%;
+                width: 100%;
+            }
+            .banner-img {
+                position: absolute;
+                top: 0;
+                width: 100%;
+            }
+        }
+        .sub-banner {
+            width: 100%;
+            object-fit: cover;
+            margin-bottom: 40px;
+        }
+    }
+}
+.btn-more {
+    margin-top: 50px;
+    width: 100%;
+    &:hover {
+        color: #17e3a69c;
+    }
+}

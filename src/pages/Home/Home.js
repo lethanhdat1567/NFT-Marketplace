@@ -109,7 +109,7 @@ function Home() {
                 <CommentItem name="Philip Colbert" avatar={imgs.avatarComment} />
                 <CommentItem name="Robart Foden" avatar={imgs.avatarComment1} />
             </Comment>
-            <Subscribe></Subscribe>
+            <Subscribe banner={imgs.subscribe}></Subscribe>
         </>
     );
 }

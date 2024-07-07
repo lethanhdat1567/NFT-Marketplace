@@ -8,9 +8,9 @@
     @include abs.screen(xl) {
         width: 500px;
     }
-    // @include abs.screen(sm) {
-    //     width: 100%;
-    // }
+    @include abs.screen(sm) {
+        width: calc(100vw - 20px);
+    }
 }
 .item-title {
     padding: 20px 30px 10px;

@@ -7,5 +7,7 @@ const routes = {
     Artists: '/artists',
     Editor: '/editorial',
     FAQs: '/faqs',
+    Blogs: '/blogs',
+    BlogsDetail: '/blogsdetail',
 };
 export default routes;

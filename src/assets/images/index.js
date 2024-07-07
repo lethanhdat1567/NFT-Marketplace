@@ -59,4 +59,9 @@ export const imgs = {
     drop1: require('./imgs/drop1.png'),
     drop2: require('./imgs/drop2.png'),
     drop3: require('./imgs/drop3.png'),
+    BlogItem1: require('./imgs/BlogItem1.png'),
+    BlogDetailBanner: require('./imgs/BlogDetailBanner.png'),
+    BlogBannerDetail1: require('./imgs/BlogBannerDetail1.png'),
+    SubBannerBlog1: require('./imgs/SubBannerBlog1.png'),
+    SubBannerBlog2: require('./imgs/SubBannerBlog2.png'),
 };
