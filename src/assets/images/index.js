@@ -64,4 +64,5 @@ export const imgs = {
     BlogBannerDetail1: require('./imgs/BlogBannerDetail1.png'),
     SubBannerBlog1: require('./imgs/SubBannerBlog1.png'),
     SubBannerBlog2: require('./imgs/SubBannerBlog2.png'),
+    unsetImg: require('./imgs/UnsetImg.png'),
 };

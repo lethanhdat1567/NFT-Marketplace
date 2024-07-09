@@ -8,13 +8,17 @@ import Search from '~/templates/Header/components/Search';
 import Button from '~/layout/components/Button';
 import MenuItem from './components/MenuItem/MenuItem';
 import { arrowLeft } from '~/assets/icons';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import DropdownConnect from '~/layout/components/DropdownConnect';
 
 const cx = classNames.bind(styles);
 
 function Header() {
     const [showNavbar, setShowNavbar] = useState(false);
+    const [toggleDropdown, setToggleDropdown] = useState(false);
+    useEffect(() => {
+        setToggleDropdown(false);
+    }, []);
     return (
         <header className={cx('header')}>
             <div className="container">
@@ -31,28 +35,28 @@ function Header() {
                             {arrowLeft()}
                         </button>
                         <MenuItem title="Home" items={['Home 1', 'Home 2', 'Home 3']} />
-                        <MenuItem
-                            leftIcon={collect()}
-                            title="Explore"
-                            items={['Explore 1', 'Explore 2', 'Explore 3']}
-                        />
+                        <MenuItem leftIcon={collect()} title="Explore" items={['Collection', 'ArtWork']} />
                         <MenuItem
                             leftIcon={art()}
                             title="Community"
-                            items={['Community 1', 'Community 2', 'Community 3']}
+                            items={['About us', 'Artists', 'Editorial', 'FAQs', 'Blogs']}
                         />
-                        <Button rounded className={cx('nav-btn-con')}>
+                        <Button
+                            onClick={() => setToggleDropdown(!toggleDropdown)}
+                            rounded
+                            className={cx('nav-btn-con')}
+                        >
                             Connect
                         </Button>
                     </nav>
                     <Search type="mobile" />
-                    <Button rounded className={cx('header-btn')}>
+                    <Button onClick={() => setToggleDropdown(!toggleDropdown)} rounded className={cx('header-btn')}>
                         Connect
                     </Button>
                     <div onClick={() => setShowNavbar(false)} className={cx('navbar-overlay')}></div>
                 </div>
             </div>
-            <DropdownConnect></DropdownConnect>
+            <DropdownConnect toggle={toggleDropdown} setToggle={setToggleDropdown}></DropdownConnect>
         </header>
     );
 }

@@ -4,10 +4,13 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 10px 0px;
+    padding: 5px 0px;
     cursor: pointer;
     color: var(--text-color);
     transition: ease 0.3s;
+    @include abs.screen(xl) {
+        margin-bottom: 10px;
+    }
     &:hover {
         color: var(--text-hover);
         .menu-arrow {
@@ -41,9 +44,10 @@
     align-items: flex-start;
 }
 .item-link {
-    margin: 0 !important;
     font-size: 1.5rem;
     font-weight: 400;
-    padding: 14px 0px !important;
     color: #fff;
+}
+.nav-link {
+    width: 100%;
 }
