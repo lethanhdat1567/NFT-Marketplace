@@ -2,6 +2,11 @@
     background-color: #212127;
     border-radius: 10px;
     overflow: hidden;
+    &:hover {
+        .banner-img {
+            transform: scale(1.1);
+        }
+    }
 }
 
 .heading {
@@ -21,9 +26,11 @@
     }
 }
 .banner {
+    overflow: hidden;
     width: 100%;
 }
 .banner-img {
+    transition: ease 0.4s;
     width: 100%;
     height: 100%;
     object-fit: cover;

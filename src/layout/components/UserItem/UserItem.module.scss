@@ -1,6 +1,8 @@
 @use '~/src/scss/abstracts/' as abs;
 .item {
     background-color: #212127;
+    border-radius: 10px;
+    overflow: hidden;
 }
 .background {
     display: flex;

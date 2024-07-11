@@ -2,6 +2,9 @@
 .comment {
     padding: 140px 0px;
 }
+.inner {
+    overflow: hidden;
+}
 .title {
     font-size: 5rem;
     font-weight: 500;
@@ -13,12 +16,26 @@
         font-size: 2rem;
     }
 }
+.wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    @include abs.screen(md) {
+        flex-direction: column-reverse;
+    }
+}
 .comment-wrap {
+    overflow: hidden;
     display: flex;
     align-items: center;
     gap: 30px;
     width: min(1170px, 100%);
-    overflow: hidden;
+    @include abs.screen(sm) {
+        overflow: auto;
+    }
+}
+.comment-item {
+    transition: ease 0.4s;
 }
 .slice-wrap {
     display: flex;

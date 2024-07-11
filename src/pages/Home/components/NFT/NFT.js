@@ -7,7 +7,9 @@ import NFTcard from '~/layout/components/NFTcard';
 const cx = classNames.bind(styles);
 
 function NFT({ children }) {
-    const [active, isActive] = useState(true);
+    // State
+    const [active, setActive] = useState('NFTs');
+    // Return
     return (
         <div className={cx('NFT')}>
             <div className="container">
@@ -15,12 +17,30 @@ function NFT({ children }) {
                     <h2 className={cx('heading')}>Latest artworks with most valued bids</h2>
                     <div className={cx('nav-wrap')}>
                         <div className={cx('nav-left')}>
-                            <span className={cx('nft', { active: active })}>NFTs</span>
-                            <span className={cx('desc')}>Description</span>
+                            <span
+                                className={cx('nft', { active: active === 'NFTs' })}
+                                onClick={() => setActive('NFTs')}
+                            >
+                                NFTs
+                            </span>
+                            <span
+                                className={cx('desc', { active: active === 'desc' })}
+                                onClick={() => setActive('desc')}
+                            >
+                                Description
+                            </span>
                         </div>
                         <div className={cx('nav-right')}>
-                            <span className={cx('short')}>Short by:</span>
-                            <div className={cx('order')}>
+                            <span
+                                className={cx('short', { active: active === 'shortBy' })}
+                                onClick={() => setActive('shortBy')}
+                            >
+                                Short by:
+                            </span>
+                            <div
+                                className={cx('order', { active: active === 'order' })}
+                                onClick={() => setActive('order')}
+                            >
                                 <span className={cx('current')}>Curated order</span>
                                 {arrowDown()}
                             </div>

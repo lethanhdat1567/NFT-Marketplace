@@ -79,13 +79,25 @@ function Artwork() {
                                         </Tippy>
                                     </div>
                                 </div>
-                                <div className="row row-cols-3 row-cols-lg-2 row-cols-md-1 g-2">
-                                    <ArtworkItem />
-                                    <ArtworkItem />
-                                    <ArtworkItem />
-                                    <ArtworkItem />
-                                    <ArtworkItem />
-                                    <ArtworkItem />
+                                <div className="row row-cols-3 row-cols-lg-2 row-cols-md-1 g-3 gy-4">
+                                    <ArtworkItem avatar={imgs.ava1} banner={imgs.ArtworkItem} />
+                                    <ArtworkItem avatar={imgs.ava2} banner={imgs.art1} />
+                                    <ArtworkItem avatar={imgs.ava3} banner={imgs.art2} />
+                                    <ArtworkItem avatar={imgs.avatarComment} banner={imgs.art3} />
+                                    <ArtworkItem avatar={imgs.avatarComment1} banner={imgs.art4} />
+                                    <ArtworkItem avatar={imgs.ava1} banner={imgs.art5} />
+                                    <ArtworkItem avatar={imgs.ava2} banner={imgs.art6} />
+                                    <ArtworkItem avatar={imgs.ava3} banner={imgs.art7} />
+                                    <ArtworkItem avatar={imgs.avatarComment} banner={imgs.art8} />
+                                    <ArtworkItem avatar={imgs.avatarComment1} banner={imgs.art9} />
+                                    <ArtworkItem avatar={imgs.ava1} banner={imgs.art10} />
+                                    <ArtworkItem avatar={imgs.ava2} banner={imgs.art11} />
+                                    <ArtworkItem avatar={imgs.ava3} banner={imgs.art12} />
+                                    <ArtworkItem avatar={imgs.avatarComment} banner={imgs.art13} />
+                                    <ArtworkItem avatar={imgs.avatarComment1} banner={imgs.art14} />
+                                    <ArtworkItem avatar={imgs.ava1} banner={imgs.art15} />
+                                    <ArtworkItem avatar={imgs.ava2} banner={imgs.art16} />
+                                    <ArtworkItem avatar={imgs.ava3} banner={imgs.art17} />
                                 </div>
                             </div>
                         </div>

@@ -6,9 +6,6 @@ import Img from '~/assets/images/Img/Img';
 const cx = classNames.bind(styles);
 
 function Item({ data }) {
-    {
-        console.log(data);
-    }
     return (
         <Link to="profile">
             <div className={cx('wrap')}>

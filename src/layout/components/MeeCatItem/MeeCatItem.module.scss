@@ -17,13 +17,21 @@
         margin: 0px 10px;
     }
 }
+.item {
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform ease 0.4s;
+    &:hover {
+        box-shadow: -12px 14px 48px -4px rgba(53, 50, 50, 0.75);
+        -webkit-box-shadow: -12px 14px 48px -4px rgba(53, 50, 50, 0.75);
+        -moz-box-shadow: -12px 14px 48px -4px rgba(53, 50, 50, 0.75);
+        transform: translateY(-5px);
+    }
+}
 .card-wrap {
     position: absolute;
     inset: 0;
     transition: ease 0.4s;
-    &:hover {
-        transform: scale(1.1);
-    }
 }
 .card-img {
     width: 100%;

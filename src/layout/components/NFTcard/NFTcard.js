@@ -36,10 +36,10 @@ function NFTcard({ avatar, name, banner }) {
                 </div>
                 <div className={cx('buy')}>
                     <div className={cx('buy-user')}>
-                        <img src={imgs.avatar} className={cx('buy-avatar')} />
-                        <img src={imgs.avatar} className={cx('buy-avatar')} />
-                        <img src={imgs.avatar} className={cx('buy-avatar')} />
-                        <img src={imgs.avatar} className={cx('buy-avatar')} />
+                        <img src={imgs.avagr1} className={cx('buy-avatar')} />
+                        <img src={imgs.avagr2} className={cx('buy-avatar')} />
+                        <img src={imgs.ava1} className={cx('buy-avatar')} />
+                        <img src={imgs.ava2} className={cx('buy-avatar')} />
                     </div>
                     <p className={cx('time')}>Last sold for 16.0 ETH</p>
                 </div>

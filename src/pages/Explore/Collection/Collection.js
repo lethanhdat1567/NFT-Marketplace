@@ -44,102 +44,90 @@ function Collection() {
                         </Tippy>
                     </div>
                     <div className={cx('items')}>
-                        <div className="row row-cols-2 row-cols-lg-1">
+                        <div className="row row-cols-2 row-cols-lg-1 g-xl-4 g-md-1">
                             <CollectCard
                                 name="ALTERNATE MEDIUM SPACE"
-                                avatar={imgs.avatar}
+                                avatar={imgs.ava1}
                                 user="@alaxgender"
                                 background={imgs.collect1}
                             />
                             <CollectCard
                                 name="ALTERNATE MEDIUM SPACE"
-                                avatar={imgs.avatar}
+                                avatar={imgs.ava2}
                                 user="@alaxgender"
                                 background={imgs.collect2}
                             />
                             <CollectCard
                                 name="ALTERNATE MEDIUM SPACE"
-                                avatar={imgs.avatar}
+                                avatar={imgs.avagr1}
                                 user="@alaxgender"
-                                background={imgs.collect3}
+                                background={imgs.col1}
                             />
                             <CollectCard
                                 name="ALTERNATE MEDIUM SPACE"
-                                avatar={imgs.avatar}
+                                avatar={imgs.avagr2}
                                 user="@alaxgender"
                                 background={imgs.collect4}
                             />
                             <CollectCard
                                 name="ALTERNATE MEDIUM SPACE"
-                                avatar={imgs.avatar}
+                                avatar={imgs.avatarComment}
                                 user="@alaxgender"
-                                background={imgs.collect1}
+                                background={imgs.col2}
                             />
                             <CollectCard
                                 name="ALTERNATE MEDIUM SPACE"
-                                avatar={imgs.avatar}
+                                avatar={imgs.avatarComment1}
                                 user="@alaxgender"
-                                background={imgs.collect2}
+                                background={imgs.col3}
                             />
                             <CollectCard
                                 name="ALTERNATE MEDIUM SPACE"
-                                avatar={imgs.avatar}
+                                avatar={imgs.teamAvatar}
                                 user="@alaxgender"
                                 background={imgs.collect3}
                             />
                             <CollectCard
                                 name="ALTERNATE MEDIUM SPACE"
-                                avatar={imgs.avatar}
+                                avatar={imgs.ava1}
                                 user="@alaxgender"
-                                background={imgs.collect4}
+                                background={imgs.col4}
                             />
                             <CollectCard
                                 name="ALTERNATE MEDIUM SPACE"
-                                avatar={imgs.avatar}
+                                avatar={imgs.ava1}
                                 user="@alaxgender"
-                                background={imgs.collect1}
+                                background={imgs.col5}
                             />
                             <CollectCard
                                 name="ALTERNATE MEDIUM SPACE"
-                                avatar={imgs.avatar}
+                                avatar={imgs.ava3}
                                 user="@alaxgender"
-                                background={imgs.collect2}
+                                background={imgs.col6}
                             />
                             <CollectCard
                                 name="ALTERNATE MEDIUM SPACE"
-                                avatar={imgs.avatar}
+                                avatar={imgs.ava2}
                                 user="@alaxgender"
-                                background={imgs.collect3}
+                                background={imgs.col7}
                             />
                             <CollectCard
                                 name="ALTERNATE MEDIUM SPACE"
-                                avatar={imgs.avatar}
+                                avatar={imgs.avatarComment}
                                 user="@alaxgender"
-                                background={imgs.collect4}
+                                background={imgs.col8}
                             />
                             <CollectCard
                                 name="ALTERNATE MEDIUM SPACE"
-                                avatar={imgs.avatar}
+                                avatar={imgs.ava1}
                                 user="@alaxgender"
-                                background={imgs.collect1}
+                                background={imgs.col9}
                             />
                             <CollectCard
                                 name="ALTERNATE MEDIUM SPACE"
-                                avatar={imgs.avatar}
+                                avatar={imgs.avagr2}
                                 user="@alaxgender"
-                                background={imgs.collect2}
-                            />
-                            <CollectCard
-                                name="ALTERNATE MEDIUM SPACE"
-                                avatar={imgs.avatar}
-                                user="@alaxgender"
-                                background={imgs.collect3}
-                            />
-                            <CollectCard
-                                name="ALTERNATE MEDIUM SPACE"
-                                avatar={imgs.avatar}
-                                user="@alaxgender"
-                                background={imgs.collect4}
+                                background={imgs.col10}
                             />
                         </div>
                     </div>

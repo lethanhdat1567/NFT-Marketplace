@@ -51,12 +51,12 @@ function AboutUs() {
                     <div className={cx('team')}>
                         <h2 className={cx('team-title')}>Our team</h2>
                         <div className="row row-cols-3 row-cols-lg-2 row-cols-md-1 gy-3">
-                            <UserItem />
-                            <UserItem />
-                            <UserItem />
-                            <UserItem />
-                            <UserItem />
-                            <UserItem />
+                            <UserItem ab={imgs.teamBanner} aba={imgs.teamAvatar} />
+                            <UserItem ab={imgs.ab1} aba={imgs.aba1} />
+                            <UserItem ab={imgs.ab2} aba={imgs.aba2} />
+                            <UserItem ab={imgs.ab3} aba={imgs.aba3} />
+                            <UserItem ab={imgs.ab4} aba={imgs.aba4} />
+                            <UserItem ab={imgs.ab5} aba={imgs.aba5} />
                         </div>
                     </div>
                 </div>

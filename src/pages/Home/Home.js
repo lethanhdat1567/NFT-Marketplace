@@ -20,32 +20,32 @@ function Home() {
         <>
             <Hero />
             <NFT>
-                <NFTcard avatar={imgs.avatar} name="@mahbubul" banner={imgs.NFTcard1} />
-                <NFTcard avatar={imgs.avatar} name="@mahbubul" banner={imgs.NFTcard2} />
-                <NFTcard avatar={imgs.avatar} name="@mahbubul" banner={imgs.NFTcard3} />
+                <NFTcard avatar={imgs.ava1} name="@mahbubul" banner={imgs.NFTcard1} />
+                <NFTcard avatar={imgs.avagr2} name="@mahbubul" banner={imgs.NFTcard2} />
+                <NFTcard avatar={imgs.ava3} name="@mahbubul" banner={imgs.NFTcard3} />
             </NFT>
             <Collection>
                 <CollectCard
                     name="ALTERNATE MEDIUM SPACE"
-                    avatar={imgs.avatar}
+                    avatar={imgs.ava1}
                     user="@alaxgender"
                     background={imgs.collect1}
                 />
                 <CollectCard
                     name="ALTERNATE MEDIUM SPACE"
-                    avatar={imgs.avatar}
+                    avatar={imgs.avatarComment1}
                     user="@alaxgender"
                     background={imgs.collect2}
                 />
                 <CollectCard
                     name="ALTERNATE MEDIUM SPACE"
-                    avatar={imgs.avatar}
+                    avatar={imgs.avagr2}
                     user="@alaxgender"
                     background={imgs.collect3}
                 />
                 <CollectCard
                     name="ALTERNATE MEDIUM SPACE"
-                    avatar={imgs.avatar}
+                    avatar={imgs.avatarComment}
                     user="@alaxgender"
                     background={imgs.collect4}
                 />

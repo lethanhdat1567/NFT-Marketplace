@@ -17,10 +17,10 @@ function MeeCatItem({ img }) {
                     </Link>
                     <div className={cx('header')}>
                         <div className={cx('users')}>
-                            <img src={imgs.avatar} className={cx('user-img')} />
-                            <img src={imgs.avatar} className={cx('user-img')} />
-                            <img src={imgs.avatar} className={cx('user-img')} />
-                            <img src={imgs.avatar} className={cx('user-img')} />
+                            <img src={imgs.avagr1} className={cx('user-img')} />
+                            <img src={imgs.avagr2} className={cx('user-img')} />
+                            <img src={imgs.ava1} className={cx('user-img')} />
+                            <img src={imgs.ava2} className={cx('user-img')} />
                         </div>
                         {MeeCatIcon()}
                     </div>

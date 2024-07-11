@@ -27,10 +27,10 @@ function CollectCard({ name, avatar, user, background }) {
                     <div className={cx('wrapper')}>
                         <p className={cx('info-desc')}>Collected by (5)</p>
                         <div className={cx('img-wrap')}>
-                            <img src={imgs.avatar} className={cx('img-user')} />
-                            <img src={imgs.avatar} className={cx('img-user')} />
-                            <img src={imgs.avatar} className={cx('img-user')} />
-                            <img src={imgs.avatar} className={cx('img-user')} />
+                            <img src={imgs.avagr1} className={cx('img-user')} />
+                            <img src={imgs.avagr2} className={cx('img-user')} />
+                            <img src={imgs.ava1} className={cx('img-user')} />
+                            <img src={imgs.ava2} className={cx('img-user')} />
                         </div>
                     </div>
                 </div>

@@ -2,6 +2,7 @@ import classNames from 'classnames/bind';
 import style from './Hero.module.scss';
 import Button from '~/layout/components/Button';
 import { imgs } from '~/assets/images';
+import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(style);
 function Hero() {
@@ -21,7 +22,9 @@ function Hero() {
                                     <Button className={cx('info-btn')} primary>
                                         Let’s Explore
                                     </Button>
-                                    <img className={cx('info-img')} src={imgs.user} />
+                                    <Link>
+                                        <img className={cx('info-img')} src={imgs.user} />
+                                    </Link>
                                 </div>
                             </div>
                             <div className={cx('right')}>

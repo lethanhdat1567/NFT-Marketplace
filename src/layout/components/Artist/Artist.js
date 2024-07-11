@@ -1,10 +1,15 @@
 import styles from './Artist.module.scss';
 import classNames from 'classnames/bind';
+import { useState } from 'react';
 import { imgs } from '~/assets/images';
 
 const cx = classNames.bind(styles);
 
 function Artist({ decor, head, name, nickname }) {
+    // state
+    const [follow, setFollow] = useState(false);
+
+    // return
     return (
         <div className={cx('col')}>
             <article className={cx('item')}>
@@ -18,9 +23,19 @@ function Artist({ decor, head, name, nickname }) {
                             <span className={cx('name')}>{name}</span>
                             <span className={cx('nickname')}>{nickname}</span>
                         </div>
-                        <button className={cx('follow-btn')}>
-                            <span className={cx('follow')}>+ Follow</span>
-                        </button>
+                        {/* Set following */}
+                        {follow ? (
+                            <button
+                                className={cx('follow-btn', 'follow-btn--active')}
+                                onClick={() => setFollow(!follow)}
+                            >
+                                <span className={cx('following')}>Following</span>
+                            </button>
+                        ) : (
+                            <button className={cx('follow-btn')} onClick={() => setFollow(!follow)}>
+                                <span className={cx('follow')}>+ Follow</span>
+                            </button>
+                        )}
                     </div>
                     <div className={cx('subrice')}>
                         <div className={cx('subrice-info')}>

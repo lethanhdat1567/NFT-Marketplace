@@ -9,6 +9,7 @@ import { searchBtn } from '~/assets/icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAnchorCircleXmark, faCircleXmark, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { useDebounce } from '~/Hooks/Debounce';
+import * as searchService from '~/apiService/searchService';
 const cx = classNames.bind(styles);
 
 function SearchValue({ children, value, type, showResult, setShowResult }) {
@@ -24,16 +25,12 @@ function SearchValue({ children, value, type, showResult, setShowResult }) {
             return;
         }
         setShowLoading(true);
-
-        fetch(`https://tiktok.fullstack.edu.vn/api/users/search?q=${encodeURIComponent(debounce)}&type=less`)
-            .then((res) => res.json())
-            .then((data) => {
-                setSearchResult(data.data);
-                setShowLoading(false);
-            })
-            .catch(() => {
-                setShowLoading(false);
-            });
+        const fetchApi = async () => {
+            const result = await searchService.search(debounce);
+            setSearchResult(result);
+            setShowLoading(false);
+        };
+        fetchApi();
     }, [debounce]);
 
     if (type === 'mobile') {

@@ -85,6 +85,15 @@
     padding: 10px 26px;
     background-color: #0019fe;
     border-radius: 999px;
+    &--active {
+        width: 35%;
+        color: #000;
+        background-color: #dcdcdc;
+
+        @include abs.screen(xl) {
+            width: 100%;
+        }
+    }
     @include abs.screen(xl) {
         text-align: center;
         width: 100%;
@@ -95,7 +104,11 @@
     @include abs.screen(sm) {
         width: 112px;
     }
+    &:hover {
+        opacity: 0.8;
+    }
 }
+
 .follow {
     display: block;
     width: 60px;

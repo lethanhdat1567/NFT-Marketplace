@@ -20,19 +20,19 @@ function Community() {
                                 <img src={imgs.CommuBanner} className={cx('decor')} />
                             </Link>
                             <Link>
-                                <img className={cx('decor-1')} src={imgs.Commu1} title="user 1" />
+                                <img className={cx('decor-1')} src={imgs.Commu1} title="Create use" />
                             </Link>
                             <Link>
-                                <img className={cx('decor-2')} src={imgs.Commu2} title="user 2" />
+                                <img className={cx('decor-2')} src={imgs.Commu2} title="Create use" />
                             </Link>
                             <Link>
-                                <img className={cx('decor-3')} src={imgs.Commu3} title="user 3" />
+                                <img className={cx('decor-3')} src={imgs.Commu3} title="Create use" />
                             </Link>
                             <Link>
-                                <img className={cx('decor-4')} src={imgs.Commu4} title="user 4" />
+                                <img className={cx('decor-4')} src={imgs.Commu4} title="Create use" />
                             </Link>
                             <Link>
-                                <img className={cx('decor-5')} src={imgs.Commu5} title="user 5" />
+                                <img className={cx('decor-5')} src={imgs.Commu5} title="Create use" />
                             </Link>
                         </div>
                     </div>

@@ -5,14 +5,14 @@ import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);
 
-function UserItem() {
+function UserItem({ ab, aba }) {
     return (
         <div className="col">
             <div className={cx('item')}>
-                <img src={imgs.teamBanner} className={cx('background')} />
+                <img src={ab} className={cx('background')} />
                 <div className={cx('info')}>
                     <div className={cx('avatar')}>
-                        <img src={imgs.teamAvatar} className={cx('avatar-img')} />
+                        <img src={aba} className={cx('avatar-img')} />
                     </div>
                     <h4 className={cx('name')}>Jane Cooper</h4>
                     <p className={cx('desc')}>NFT's are transform the way commerce things.</p>
