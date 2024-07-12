@@ -7,13 +7,24 @@
     font-size: 5rem;
     font-weight: 500;
     margin-bottom: 60px;
+}
+
+.inner {
+    margin-bottom: 20px;
+    height: 1218px;
+    overflow: hidden;
+    transition: ease 0.4s;
     @include abs.screen(md) {
-        font-size: 4rem;
+        height: 1200px;
+    }
+    @include abs.screen(sm) {
+        height: 1250px;
     }
 }
-.inner {
-    margin-bottom: 140px;
+.inner.more {
+    height: 1964px;
 }
+
 .table {
     width: 100%;
     margin-bottom: 60px;
@@ -43,7 +54,7 @@
             font-size: 1.4rem;
         }
         &.respon {
-            @include abs.screen(sm) {
+            @include abs.screen(md) {
                 display: none;
             }
         }
@@ -52,4 +63,5 @@
 .btn {
     display: flex;
     margin: 0 auto;
+    margin-bottom: 100px;
 }

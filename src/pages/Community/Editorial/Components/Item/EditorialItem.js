@@ -1,21 +1,27 @@
 import { imgs } from '~/assets/images';
 import styles from './EditorialItem.module.scss';
 import classNames from 'classnames/bind';
+import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
-function EditorialItem() {
+function EditorialItem({ title, banner, desc }) {
     return (
         <div className="col">
             <div className={cx('item')}>
                 <div className={cx('banner')}>
                     <div className={cx('banner-inner')}>
-                        <img src={imgs.EditBanner1} className={cx('banner-img')} />
+                        <Link>
+                            <img src={banner} className={cx('banner-img')} />
+                        </Link>
                     </div>
                 </div>
                 <div className={cx('info')}>
-                    <h3 className={cx('name')}>INTRODUCING: THE 'Meecat DEBUTS' COLLECTION</h3>
-                    <p className={cx('desc')}>The New Arrivals to our Artist Community Discuss Their 'Meecat Debuts'</p>
+                    <Link>
+                        {' '}
+                        <h3 className={cx('name')}>{title}</h3>
+                    </Link>
+                    <p className={cx('desc')}>{desc}</p>
                 </div>
             </div>
         </div>

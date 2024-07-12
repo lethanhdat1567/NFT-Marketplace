@@ -16,16 +16,16 @@ function FeatureEdit() {
             </div>
             <div className="row row-cols-4 row-cols-lg-2 g-2">
                 <div className="col">
-                    <img src={imgs.FeatureEdit1} className={cx('img')} />
+                    <img src={imgs.fe1} className={cx('img')} />
                 </div>
                 <div className="col">
-                    <img src={imgs.FeatureEdit1} className={cx('img')} />
+                    <img src={imgs.fe2} className={cx('img')} />
                 </div>
                 <div className="col">
-                    <img src={imgs.FeatureEdit1} className={cx('img')} />
+                    <img src={imgs.fe3} className={cx('img')} />
                 </div>
                 <div className="col">
-                    <img src={imgs.FeatureEdit1} className={cx('img')} />
+                    <img src={imgs.fe4} className={cx('img')} />
                 </div>
             </div>
             <Button text className={cx('respon')}>

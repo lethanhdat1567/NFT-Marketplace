@@ -8,6 +8,79 @@ import { imgs } from '~/assets/images';
 const cx = classNames.bind(styles);
 
 function FAQs() {
+    const items = {
+        collectors: [
+            {
+                title: 'Creating a MetaMask Wallet in Five Steps',
+                desc: 'MetaMask wallets are crypto wallets that can be used to store crypto funds, NFTs and digital collectibles. Think of a crypto wallet as a personal safe in which your precious digital possessions can be safely stored.',
+            },
+            {
+                title: 'Meecat Drops: Collectibles Information Tooltips',
+                desc: 'MetaMask wallets are crypto wallets that can be used to store crypto funds, NFTs and digital collectibles. Think of a crypto wallet as a personal safe in which your precious digital possessions can be safely stored.',
+            },
+            {
+                title: 'Storing, Displaying and Transferring NFTs',
+                desc: 'MetaMask wallets are crypto wallets that can be used to store crypto funds, NFTs and digital collectibles. Think of a crypto wallet as a personal safe in which your precious digital possessions can be safely stored.',
+            },
+            {
+                title: 'A Guide to Buying Digital Collectibles',
+                desc: 'MetaMask wallets are crypto wallets that can be used to store crypto funds, NFTs and digital collectibles. Think of a crypto wallet as a personal safe in which your precious digital possessions can be safely stored.',
+            },
+            {
+                title: 'Creating a MetaMask Wallet in Five Steps',
+                desc: 'MetaMask wallets are crypto wallets that can be used to store crypto funds, NFTs and digital collectibles. Think of a crypto wallet as a personal safe in which your precious digital possessions can be safely stored.',
+            },
+            {
+                title: 'Fixed Price and Offer-based Listings',
+                desc: 'MetaMask wallets are crypto wallets that can be used to store crypto funds, NFTs and digital collectibles. Think of a crypto wallet as a personal safe in which your precious digital possessions can be safely stored.',
+            },
+        ],
+        general: [
+            {
+                title: 'Platform Commission and Secondary Market Sales and Royalties',
+                desc: 'The Meecat Marketplace Commission model applies to artwork and collectibles (including phygital goods) created by an artist without creative input from the Meecat platform.',
+            },
+            {
+                title: 'Meecat Drops: Collectibles Information Tooltips',
+                desc: 'The Meecat Marketplace Commission model applies to artwork and collectibles (including phygital goods) created by an artist without creative input from the Meecat platform.',
+            },
+            {
+                title: "Meecat's Token Standard: ERC-1155",
+                desc: 'The Meecat Marketplace Commission model applies to artwork and collectibles (including phygital goods) created by an artist without creative input from the Meecat platform.',
+            },
+            {
+                title: 'Returns, Delivery Costs and Additional Charges',
+                desc: 'The Meecat Marketplace Commission model applies to artwork and collectibles (including phygital goods) created by an artist without creative input from the Meecat platform.',
+            },
+            {
+                title: 'Creating and Curating a Collection',
+                desc: 'The Meecat Marketplace Commission model applies to artwork and collectibles (including phygital goods) created by an artist without creative input from the Meecat platform.',
+            },
+            {
+                title: 'The Meecat Duck Membership System',
+                desc: 'The Meecat Marketplace Commission model applies to artwork and collectibles (including phygital goods) created by an artist without creative input from the Meecat platform.',
+            },
+        ],
+        artist: [
+            {
+                title: 'Listing NFT Artworks',
+                desc: 'If you want to sell your art on the Dissrup platform, you will need to list each artwork individually. Before you can list your NFT artwork',
+            },
+            {
+                title: 'Technical Specifications for Uploading Artwork to the Dissrup Marketplace',
+                desc: 'If you want to sell your art on the Dissrup platform, you will need to list each artwork individually. Before you can list your NFT artwork',
+            },
+            {
+                title: 'Crypto Transaction Fees Explained',
+                desc: 'If you want to sell your art on the Dissrup platform, you will need to list each artwork individually. Before you can list your NFT artwork',
+            },
+            {
+                title: 'Joining Dissrup as a Creator',
+                desc: 'If you want to sell your art on the Dissrup platform, you will need to list each artwork individually. Before you can list your NFT artwork',
+            },
+        ],
+    };
+
     return (
         <>
             <div className={cx('FAQs')}>
@@ -20,19 +93,19 @@ function FAQs() {
                         </p>
                     </div>
                     <Collector title={'Collectors'}>
-                        <CollectorItem />
-                        <CollectorItem />
-                        <CollectorItem />
+                        {items.collectors.map((item, index) => (
+                            <CollectorItem key={index} title={item.title} desc={item.desc} index={index} />
+                        ))}
                     </Collector>
                     <Collector title={'General'}>
-                        <CollectorItem />
-                        <CollectorItem />
-                        <CollectorItem />
+                        {items.general.map((item, index) => (
+                            <CollectorItem key={index} title={item.title} desc={item.desc} index={index} />
+                        ))}
                     </Collector>
                     <Collector title={'Artists'}>
-                        <CollectorItem />
-                        <CollectorItem />
-                        <CollectorItem />
+                        {items.artist.map((item, index) => (
+                            <CollectorItem key={index} title={item.title} desc={item.desc} index={index} />
+                        ))}
                     </Collector>
                 </div>
             </div>
