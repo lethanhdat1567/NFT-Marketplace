@@ -34,7 +34,7 @@ function Header() {
                         <button onClick={() => setShowNavbar(false)} className={cx('nav-back')}>
                             {arrowLeft()}
                         </button>
-                        <MenuItem title="Home" items={['Home 1', 'Home 2', 'Home 3']} />
+                        <Link to="/">Home</Link>
                         <MenuItem leftIcon={collect()} title="Explore" items={['Collection', 'ArtWork']} />
                         <MenuItem
                             leftIcon={art()}

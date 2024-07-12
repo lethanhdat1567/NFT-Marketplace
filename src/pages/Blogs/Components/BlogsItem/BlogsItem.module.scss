@@ -1,3 +1,5 @@
+@use '~/src/scss/abstracts/' as abs;
+
 .item {
     .banner {
         position: relative;
@@ -62,4 +64,8 @@
         width: 100%;
         border: 1px solid #17e3a69c;
     }
+}
+
+.items-wrap.more {
+    height: 100%;
 }

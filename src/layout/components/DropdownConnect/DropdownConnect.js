@@ -5,12 +5,17 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useState } from 'react';
+import Validation from '../Validation';
 
 const cx = classNames.bind(styles);
 
 function DropdownConnect({ toggle, setToggle }) {
     useEffect(() => {
         setToggle(toggle);
+        if (toggle) {
+            document.body.style.position = 'fixed';
+            document.body.style.inset = '0';
+        }
     }, [toggle]);
     return (
         // show/hide
@@ -26,11 +31,9 @@ function DropdownConnect({ toggle, setToggle }) {
                     <FontAwesomeIcon icon={faXmark} />
                 </span>
                 <span className={cx('title')}>Connect</span>
-                <div className={cx('items')}>
-                    <Item />
-                    <Item />
-                    <Item />
-                </div>
+                {/* Validate */}
+                <Validation />
+                {/* End validate */}
                 <div className={cx('separate-wrap')}>
                     <div className={cx('separate')}></div>
                     <span className={cx('separate-text')}>or</span>

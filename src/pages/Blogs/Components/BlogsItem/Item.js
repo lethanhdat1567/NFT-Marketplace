@@ -6,15 +6,15 @@ import Button from '~/layout/components/Button';
 import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
-function Item() {
+function Item({ title, img, avatar }) {
     return (
         <div className="col">
             <div className={cx('item')}>
                 <Link to="/blogsdetail">
                     <div className={cx('banner')}>
-                        <img src={imgs.BlogItem1} className={cx('banner-img')} />
+                        <img src={img} className={cx('banner-img')} />
                         <div className={cx('user')}>
-                            <img src={imgs.avatar} className={cx('user-img')} />
+                            <img src={avatar} className={cx('user-img')} />
                             <span className={cx('user-name')}>Courtney Henry</span>
                         </div>
                     </div>
@@ -22,7 +22,7 @@ function Item() {
                 <div className={cx('info')}>
                     <span className={cx('timer')}>5 min to read</span>
                     <Link to={'/blogsdetail'}>
-                        <h4 className={cx('info-name')}>Awesome NFT Projects That Aren’t PFP Collections</h4>
+                        <h4 className={cx('info-name')}>{title}</h4>
                     </Link>
                 </div>
                 <Button to="/blogsdetail" rounded className={cx('btn')}>

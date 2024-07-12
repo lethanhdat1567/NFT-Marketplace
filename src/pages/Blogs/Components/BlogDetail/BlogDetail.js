@@ -47,7 +47,6 @@ function BlogDetail() {
                             </div>
                         </div>
                     </div>
-                    {/* Content */}
                     <Item />
                 </div>
             </div>
