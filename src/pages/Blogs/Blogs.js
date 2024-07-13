@@ -8,6 +8,9 @@ import { arrowDown, arrowRight } from '~/assets/icons';
 import Comment from '../Home/components/Comment';
 import CommentItem from '~/layout/components/CommentItem';
 import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleUp, faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import Slide from '~/layout/components/Slider/Slide';
 
 const cx = classNames.bind(styles);
 
@@ -128,17 +131,16 @@ function Blogs() {
                         <BlogsItem more={more}>{handleMore()}</BlogsItem>
                     )}
 
-                    <Button onClick={() => handleHeight()} className={cx('btn-more')} rightIcon={arrowDown()}>
+                    <Button
+                        onClick={() => handleHeight()}
+                        className={cx('btn-more', { up: more })}
+                        rightIcon={more ? <FontAwesomeIcon className={cx('up')} icon={faAngleUp} /> : arrowDown()}
+                    >
                         Load {more ? 'less' : 'more'}
                     </Button>
                 </div>
             </div>
-            <Comment>
-                <CommentItem name="Philip Colbert" avatar={imgs.avatarComment} />
-                <CommentItem name="Robart Foden" avatar={imgs.avatarComment1} />
-                <CommentItem name="Philip Colbert" avatar={imgs.avatarComment} />
-                <CommentItem name="Robart Foden" avatar={imgs.avatarComment1} />
-            </Comment>
+            <Slide />
         </div>
     );
 }

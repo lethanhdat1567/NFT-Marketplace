@@ -1,6 +1,7 @@
 import classNames from 'classnames/bind';
 import styles from './ArtistItem.module.scss';
 import { imgs } from '~/assets/images';
+import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
@@ -11,10 +12,16 @@ function ArtistItem({ img, unique, sold, secondary, total, index, name }) {
                 <div className={cx('artist-wrap')}>
                     <span className={cx('rankded')}>#{index + 1}</span>
                     <div className={cx('wrap-info')}>
-                        <img src={img} className={cx('info-img')} />
+                        <Link to={`/@${name}`}>
+                            <img src={img} className={cx('info-img')} />
+                        </Link>
                         <div className={cx('wrap')}>
-                            <span className={cx('name')}>{name}</span>
-                            <span className={cx('nickname')}>@80slolita</span>
+                            <Link to={`/@${name}`}>
+                                <span className={cx('name')}>{name}</span>
+                            </Link>
+                            <Link to={`/@${name}`}>
+                                <span className={cx('nickname')}>@80slolita</span>
+                            </Link>
                         </div>
                     </div>
                 </div>

@@ -5,9 +5,14 @@ import { imgs } from '~/assets/images';
 import Img from '~/assets/images/Img/Img';
 const cx = classNames.bind(styles);
 
-function Item({ data }) {
+function Item({ data, setSearchResult, setSearchValue }) {
     return (
-        <Link to="profile">
+        <Link
+            onClick={() => {
+                setSearchResult(false);
+            }}
+            to={`/@${data.full_name}`}
+        >
             <div className={cx('wrap')}>
                 <Img src={data.avatar} className={cx('img')} />
                 <div className={cx('info')}>

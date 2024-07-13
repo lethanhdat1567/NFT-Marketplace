@@ -57,4 +57,9 @@
     border: 1px solid #d3d3d3;
     display: block;
     width: 100%;
+    border-radius: 4px;
+    &.follow {
+        background-color: #cac8cb;
+        color: #000;
+    }
 }

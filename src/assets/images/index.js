@@ -164,4 +164,5 @@ export const imgs = {
     ba13: require('./imgs/ba13.png'),
     ba14: require('./imgs/ba14.png'),
     ba15: require('./imgs/ba15.png'),
+    amazon: require('./imgs/amazon.png'),
 };

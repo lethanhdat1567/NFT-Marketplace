@@ -6,7 +6,7 @@
     &.active {
         border-left: 1px solid #17e3a6;
         .info {
-            height: 100px;
+            max-height: 1000px;
             @include abs.screen(lg) {
                 height: 150px;
             }
@@ -103,8 +103,8 @@
     }
 }
 .info {
-    height: 0;
-    transition: ease 0.4s;
+    max-height: 0;
+    transition: max-height 0.5s cubic-bezier(0.77, 0, 0.175, 1);
     .desc {
         font-size: 1.7rem;
         margin: 0px 113px 30px 108px;

@@ -3,6 +3,7 @@ import styles from './AboutUs.module.scss';
 import classNames from 'classnames/bind';
 import UserItem from '~/layout/components/UserItem';
 import Subscribe from '../Home/components/Subscribe';
+import { useState } from 'react';
 
 const cx = classNames.bind(styles);
 

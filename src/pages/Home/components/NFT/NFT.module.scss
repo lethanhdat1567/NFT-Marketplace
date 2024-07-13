@@ -57,10 +57,19 @@
         font-weight: 400;
     }
 }
-.nft,
-.desc,
 .short,
 .order {
+    padding-bottom: 18px;
+    @include abs.screen(md) {
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+}
+.order {
+    cursor: pointer;
+}
+.nft,
+.desc {
     padding-bottom: 18px;
     @include abs.screen(md) {
         font-size: 1.2rem;
@@ -107,5 +116,32 @@
     margin: 0px 70px;
     @include abs.screen(lg) {
         margin: 0 !important;
+    }
+}
+.nav-more {
+    background-color: #191919;
+    padding: 10px;
+    border-radius: 10px;
+    width: 200px;
+    @include abs.screen(md) {
+        width: 150px;
+    }
+    .list {
+        display: flex;
+        flex-direction: column;
+    }
+    .item {
+        padding: 10px;
+        font-size: 1.6rem;
+        font-weight: 500;
+        transition: ease 0.4s;
+        cursor: pointer;
+        &:hover {
+            color: #009740;
+        }
+        @include abs.screen(md) {
+            font-size: 1.4rem;
+            font-weight: 400;
+        }
     }
 }

@@ -8,6 +8,7 @@ import Editorial from '~/pages/Community/Editorial';
 import FAQs from '~/pages/Community/FAQs';
 import Blogs from '~/pages/Blogs';
 import BlogDetail from '~/pages/Blogs/Components/BlogDetail';
+import Profile from '~/pages/Profile';
 const publicRoutes = [
     { path: config.routes.home, element: Home },
     { path: config.routes.collection, element: Collection },
@@ -18,6 +19,7 @@ const publicRoutes = [
     { path: config.routes.FAQs, element: FAQs },
     { path: config.routes.Blogs, element: Blogs },
     { path: config.routes.BlogsDetail, element: BlogDetail },
+    { path: config.routes.Profile, element: Profile },
 ];
 const privateRoutes = [];
 

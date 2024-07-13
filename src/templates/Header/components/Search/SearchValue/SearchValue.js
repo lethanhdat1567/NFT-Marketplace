@@ -50,7 +50,7 @@ function SearchValue({ children, value, type, showResult, setShowResult }) {
                                     <PopperWrapper>
                                         <h4 className={cx('item-title')}>People</h4>
                                         {searchResult.map((result) => (
-                                            <Item data={result} />
+                                            <Item setSearchResult={setShowResult} data={result} />
                                         ))}
                                     </PopperWrapper>
                                 </div>
@@ -99,7 +99,7 @@ function SearchValue({ children, value, type, showResult, setShowResult }) {
                         <PopperWrapper>
                             <h4 className={cx('item-title')}>People</h4>
                             {value.map((data) => (
-                                <Item key={data.id} data={data} />
+                                <Item setSearchResult={setShowResult} key={data.id} data={data} />
                             ))}
                         </PopperWrapper>
                     </div>

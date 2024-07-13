@@ -11,7 +11,9 @@ function Collection({ children }) {
                 <div className={cx('inenr')}>
                     <div className={cx('heading-wrap')}>
                         <span className={cx('curated')}>CURATED COLLECTION</span>
-                        <Button text>View all</Button>
+                        <Button to={`${process.env.REACT_APP_BASE_ROOT}collection`} text>
+                            View all
+                        </Button>
                     </div>
                     <div className="row row-cols-2 row-cols-lg-1 ">{children}</div>
                 </div>

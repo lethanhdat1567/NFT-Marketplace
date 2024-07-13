@@ -9,5 +9,6 @@ const routes = {
     FAQs: '/faqs',
     Blogs: '/blogs',
     BlogsDetail: '/blogsdetail',
+    Profile: '/:nickname',
 };
 export default routes;
