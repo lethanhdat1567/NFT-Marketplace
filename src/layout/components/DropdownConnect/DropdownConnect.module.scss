@@ -32,7 +32,7 @@
         box-shadow: 0px 23px 250px 0px #000000;
         padding: 10px 20px;
         background-color: #191919;
-        max-height: calc(100vh - 50px);
+        max-height: 100vh;
 
         .mark {
             position: absolute;
@@ -64,7 +64,7 @@
             gap: 20px;
         }
         .desc {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
             font-weight: 300;
             line-height: 3rem;
             margin-top: 20px;
@@ -92,20 +92,20 @@
     border: 1px solid #0c0c0c;
     transition: ease 0.4s;
     .text {
-        font-size: 2rem;
+        font-size: 1.8rem;
         font-weight: 300;
         color: #e8e8e8;
     }
     .item-img {
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
         object-fit: cover;
     }
     .icon {
         display: block;
         color: #fff;
-        width: 22px;
-        height: 20px;
+        width: 18px;
+        height: 14px;
     }
     .item-wrap {
         display: flex;

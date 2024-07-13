@@ -7,24 +7,7 @@ const cx = classNames.bind(styles);
 
 function Comment({ children }) {
     // Use React hook
-    const [tranform, setTranform] = useState(0);
-    console.log(tranform);
-    // Handler
-    const handleMoveLeft = () => {
-        if (tranform >= 0) {
-            return;
-        } else {
-            setTranform(tranform + 75);
-        }
-    };
-    const handleMoveRight = () => {
-        if (tranform < -300) {
-            return;
-        } else {
-            setTranform(tranform - 75);
-        }
-    };
-    // return
+
     return (
         <div className={cx('comment')}>
             <div className="container">
@@ -33,23 +16,16 @@ function Comment({ children }) {
                     <div className={cx('wrapper')}>
                         <div className={cx('slice')}>
                             <div className={cx('wrap-btn')}>
-                                <button className={cx('arrow-left')} onClick={handleMoveLeft}>
+                                <button className={cx('arrow-left')}>
                                     <img src={imgs.arrowComment} className={cx('left-img')} />
                                 </button>
 
-                                <button className={cx('arrow-right')} onClick={handleMoveRight}>
+                                <button className={cx('arrow-right')}>
                                     <img src={imgs.arrowComment} className={cx('right-img')} />
                                 </button>
                             </div>
                         </div>
-                        <div className={cx('comment-wrap')}>
-                            {/* Render children */}
-                            {React.Children.map(children, (child, index) => (
-                                <div style={{ transform: `translateX(${tranform}%)` }} className={cx('comment-item')}>
-                                    {child}
-                                </div>
-                            ))}
-                        </div>
+                        <div className={cx('comment-wrap')}>{children}</div>
                     </div>
                 </div>
             </div>

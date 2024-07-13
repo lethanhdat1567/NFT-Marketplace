@@ -5,7 +5,7 @@ import { heart, share } from '~/assets/icons';
 
 const cx = classNames.bind(styles);
 
-function NFTcard({ avatar, name, banner }) {
+function NFTcard({ avatar, name, banner, a }) {
     return (
         <div className="col">
             <div className={cx('item')}>
@@ -17,7 +17,7 @@ function NFTcard({ avatar, name, banner }) {
                     <img src={banner} className={cx('product-img')} />
                     <div className={cx('sidebar')}>
                         <div className={cx('sidebar-avatar')}>
-                            <img className={cx('avatar-img')} src={imgs.avatar} />
+                            <img className={cx('avatar-img')} src={a} />
                         </div>
                         <div className={cx('favor')}>
                             {heart()}

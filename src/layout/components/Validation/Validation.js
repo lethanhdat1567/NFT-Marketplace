@@ -48,7 +48,7 @@ function Validation() {
                 </label>
                 <input
                     id="email"
-                    className={cx('form-input')}
+                    className={cx('form-input', { error: formik.errors.email })}
                     placeholder="Your Email..."
                     onChange={formik.handleChange}
                     value={formik.values.email}
@@ -62,7 +62,7 @@ function Validation() {
                 </label>
                 <input
                     id="firstname"
-                    className={cx('form-input')}
+                    className={cx('form-input', { error: formik.errors.firstName })}
                     placeholder="Your First Name..."
                     onChange={formik.handleChange}
                     value={formik.values.firstName}
@@ -76,7 +76,7 @@ function Validation() {
                 </label>
                 <input
                     id="lastname"
-                    className={cx('form-input')}
+                    className={cx('form-input', { error: formik.errors.lastName })}
                     placeholder="Your Last Name..."
                     onChange={formik.handleChange}
                     value={formik.values.lastName}

@@ -68,7 +68,7 @@
     width: 25%;
     transition: ease 0.4s;
     &:hover {
-        transform: rotate(5deg);
+        transform: rotate(15deg);
     }
 }
 
@@ -96,4 +96,7 @@
 }
 .decor-5 {
     right: 12%;
+}
+.create {
+    margin-top: 10px;
 }

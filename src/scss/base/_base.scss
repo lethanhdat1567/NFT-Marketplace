@@ -18,6 +18,7 @@ html {
     scroll-behavior: smooth;
     overflow: overlay;
 }
+
 body {
     font-size: 1.6rem;
     font-family: 'Montserrat', sans-serif;
@@ -98,4 +99,19 @@ strong {
     margin: var(--margin) 0;
     height: 1px;
     background-color: var(--separate-color);
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    & li button::before {
+        transition: ease 0.4s;
+        content: '';
+        top: 10px;
+        width: 30px;
+        height: 5px;
+        background-color: #fff;
+        border-radius: 10px;
+    }
 }

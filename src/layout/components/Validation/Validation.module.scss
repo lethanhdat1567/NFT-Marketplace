@@ -1,9 +1,13 @@
+@use '~/src/scss/abstracts/' as abs;
 .form {
     width: 100%;
     display: flex;
     align-items: flex-start;
-    gap: 25px;
+    gap: 10px;
     flex-direction: column;
+    @include abs.screen(sm) {
+        gap: 15px;
+    }
 }
 .form-group {
     display: flex;
@@ -25,6 +29,12 @@
     &:focus {
         border: 1px solid #17e3a6;
     }
+    &.error {
+        border: 1px solid rgb(165, 9, 9);
+    }
+    @include abs.screen(sm) {
+        padding: 10px;
+    }
 }
 .btn {
     padding: 10px 20px;
@@ -44,6 +54,6 @@
 }
 .error {
     font-size: 1.4rem;
-    font-weight: 600;
+    font-weight: 400;
     color: rgb(252, 4, 4);
 }

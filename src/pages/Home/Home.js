@@ -14,15 +14,15 @@ import Artist from '~/layout/components/Artist/Artist';
 import Comment from './components/Comment';
 import CommentItem from '~/layout/components/CommentItem';
 import Subscribe from './components/Subscribe';
-
+import Slide from '~/layout/components/Slider';
 function Home() {
     return (
         <>
             <Hero />
             <NFT>
-                <NFTcard avatar={imgs.ava1} name="@mahbubul" banner={imgs.NFTcard1} />
-                <NFTcard avatar={imgs.avagr2} name="@mahbubul" banner={imgs.NFTcard2} />
-                <NFTcard avatar={imgs.ava3} name="@mahbubul" banner={imgs.NFTcard3} />
+                <NFTcard a={imgs.b1} avatar={imgs.ava1} name="@mahbubul" banner={imgs.NFTcard1} />
+                <NFTcard a={imgs.b2} avatar={imgs.avagr2} name="@mahbubul" banner={imgs.NFTcard2} />
+                <NFTcard a={imgs.b3} avatar={imgs.ava3} name="@mahbubul" banner={imgs.NFTcard3} />
             </NFT>
             <Collection>
                 <CollectCard
@@ -103,12 +103,8 @@ function Home() {
                     nickname="@Doruk Kumkumoğlu"
                 />
             </Feature>
-            <Comment>
-                <CommentItem name="Philip Colbert" avatar={imgs.avatarComment} />
-                <CommentItem name="Robart Foden" avatar={imgs.avatarComment1} />
-                <CommentItem name="Philip Colbert" avatar={imgs.avatarComment} />
-                <CommentItem name="Robart Foden" avatar={imgs.avatarComment1} />
-            </Comment>
+
+            <Slide />
             <Subscribe banner={imgs.subscribe}></Subscribe>
         </>
     );

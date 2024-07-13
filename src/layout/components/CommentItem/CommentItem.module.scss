@@ -1,7 +1,7 @@
 @use '~/src/scss/abstracts/' as abs;
 .item {
     flex-shrink: 0;
-    width: 570px;
+    width: 95%;
     border-radius: 83px 0px 0px 0px;
 
     padding: 50px;
@@ -11,13 +11,6 @@
     }
     &:nth-child(even) {
         border: 2px solid #e3ff7166;
-    }
-    @include abs.screen(md) {
-        width: 350px;
-    }
-    @include abs.screen(sm) {
-        padding: 30px;
-        width: 288px;
     }
 }
 .info {
@@ -57,7 +50,7 @@
     @include abs.screen(md) {
         font-size: 1.4rem;
         font-weight: 400;
-        width: 240px;
+        width: 100%;
     }
 }
 .info-img {
