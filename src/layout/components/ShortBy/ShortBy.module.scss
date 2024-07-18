@@ -1,0 +1,55 @@
+@use '~/src/scss/abstracts/' as abs;
+.wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-more {
+    margin-top: 10px;
+}
+
+.short,
+.current,
+.item {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #191919;
+    background-color: #191919;
+    padding: 10px;
+    border-radius: 10px;
+    min-width: 200px;
+}
+.item {
+    padding: 10px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    transition: ease 0.4s;
+    cursor: pointer;
+    &:hover {
+        color: #009740;
+    }
+    @include abs.screen(md) {
+        font-size: 1.4rem;
+        font-weight: 400;
+    }
+}
+.order,
+.short,
+.current {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    @include abs.screen(md) {
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+}

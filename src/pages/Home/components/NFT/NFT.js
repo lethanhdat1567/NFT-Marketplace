@@ -5,12 +5,15 @@ import { Children, useState } from 'react';
 import { arrowDown } from '~/assets/icons';
 import NFTcard from '~/layout/components/NFTcard';
 import { PopperWrapper } from '~/layout/components/Popper';
+import ShortBy from '~/layout/components/ShortBy';
 
 const cx = classNames.bind(styles);
 
 function NFT({ children }) {
     // State
     const [active, setActive] = useState('NFTs');
+    // Data
+    const ShortByItems = ['Trending', 'Date created - Newest', 'Date created - Oldest'];
     // Return
     return (
         <div className={cx('NFT')}>
@@ -32,30 +35,8 @@ function NFT({ children }) {
                                 Description
                             </span>
                         </div>
-                        <div className={cx('nav-right')}>
-                            <span className={cx('short')} onClick={() => setActive('shortBy')}>
-                                Short by:
-                            </span>
-                            <Tippy
-                                interactive
-                                placement="bottom-end"
-                                render={(attrs) => (
-                                    <div className={cx('nav-more')} tabIndex="-1" {...attrs}>
-                                        <PopperWrapper>
-                                            <ul className={cx('list')}>
-                                                <li className={cx('item')}>Curated order</li>
-                                                <li className={cx('item')}>New order</li>
-                                                <li className={cx('item')}>Oldest order</li>
-                                            </ul>
-                                        </PopperWrapper>
-                                    </div>
-                                )}
-                            >
-                                <div className={cx('order')}>
-                                    <span className={cx('current')}>Curated order</span>
-                                    {arrowDown()}
-                                </div>
-                            </Tippy>
+                        <div className={cx('short-wrap')}>
+                            <ShortBy active={active} setActive={setActive} MenuItems={ShortByItems} />
                         </div>
                     </div>
                     <div className={cx('items')}>
