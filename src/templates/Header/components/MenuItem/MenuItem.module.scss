@@ -9,7 +9,7 @@
     color: var(--text-color);
     transition: ease 0.3s;
     @include abs.screen(xl) {
-        margin-bottom: 10px;
+        display: none;
     }
     &:hover {
         color: var(--text-hover);
@@ -23,6 +23,7 @@
         }
     }
 }
+
 .menu-arrow {
     transition: ease 0.3s;
 }
@@ -30,6 +31,7 @@
     font-size: 1.6rem;
     font-weight: 400;
 }
+
 .items-wrapper {
     min-width: 125px;
     padding: 10px;
@@ -37,6 +39,9 @@
     border-radius: 4px;
     display: flex;
     align-items: center;
+    @include abs.screen(xl) {
+        min-width: 200px;
+    }
 }
 .item {
     display: flex;
@@ -50,4 +55,34 @@
 }
 .nav-link {
     width: 100%;
+}
+.menu-wrap--mobile {
+    display: none;
+    @include abs.screen(xl) {
+        display: flex;
+        margin-bottom: 10px;
+    }
+    &:hover {
+        color: #fff;
+        .menu-arrow {
+            transform: none;
+        }
+    }
+    &.active {
+        color: var(--text-hover);
+        .menu-arrow {
+            transform: rotate(90deg);
+        }
+    }
+}
+.nav-item {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    &.active {
+        display: flex;
+    }
+}
+.nav-link--mobile {
+    border-bottom: 1px solid #5b5b5b;
 }

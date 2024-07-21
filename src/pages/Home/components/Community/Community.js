@@ -51,6 +51,7 @@ function Community() {
                                 {comunities.map((item, index) => {
                                     return (
                                         <Tippy
+                                            key={index}
                                             placement="bottom"
                                             content="Create your account!!"
                                             className={cx('create')}

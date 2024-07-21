@@ -9,43 +9,11 @@ import FeatureEdit from './Components/FeatureEdit';
 import Subscribe from '~/pages/Home/components/Subscribe';
 import { imgs } from '~/assets/images';
 import { useState } from 'react';
+import { EditorialItems } from '~/cloneData/cloneData';
 
 const cx = classNames.bind(styles);
 
 function Editorial() {
-    // Data
-    const items = [
-        {
-            title: "INTRODUCING: THE 'Meecat DEBUTS' COLLECTION",
-            banner: imgs.EditBanner1,
-            desc: "The New Arrivals to our Artist Community Discuss Their 'Meecat Debuts'",
-        },
-        {
-            title: 'MEET PHYGITAL SCULPTOR KAAN ISCAN',
-            banner: imgs.edi1,
-            desc: "The Instanbul-based artist talks us through his influences, creative process and latest artwork, 'Delay'",
-        },
-        {
-            title: "INTRODUCING: THE 'Meecat DEBUTS' COLLECTION",
-            banner: imgs.edi2,
-            desc: "The New Arrivals to our Artist Community Discuss Their 'Meecat Debuts'",
-        },
-        {
-            title: 'MEET PHYGITAL SCULPTOR KAAN ISCAN',
-            banner: imgs.edi3,
-            desc: "The Instanbul-based artist talks us through his influences, creative process and latest artwork, 'Delay'",
-        },
-        {
-            title: "INTRODUCING: THE 'Meecat DEBUTS' COLLECTION",
-            banner: imgs.edi4,
-            desc: "The New Arrivals to our Artist Community Discuss Their 'Meecat Debuts'",
-        },
-        {
-            title: 'MEET PHYGITAL SCULPTOR KAAN ISCAN',
-            banner: imgs.edi5,
-            desc: "The Instanbul-based artist talks us through his influences, creative process and latest artwork, 'Delay'",
-        },
-    ];
     // State Hook
     const [activeNav, setActiveNav] = useState(0);
     // Handler
@@ -114,7 +82,7 @@ function Editorial() {
                     </ul>
                     <div className={cx('wrap-items')}>
                         <div className="row row-cols-2 row-cols-md-1 g-4">
-                            {items.map((item, index) => (
+                            {EditorialItems[activeNav].map((item, index) => (
                                 <EditorialItem banner={item.banner} title={item.title} desc={item.desc} key={index} />
                             ))}
                         </div>

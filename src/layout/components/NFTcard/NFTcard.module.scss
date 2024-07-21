@@ -54,7 +54,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 32px;
+        padding: 32px 0px;
         gap: 30px;
         border-radius: 10px 0px 0px 10px;
         @include abs.screen(xxl) {
@@ -91,9 +91,19 @@
         flex-direction: column;
         align-items: center;
         gap: 7px;
+        padding: 0px 20px;
+
         .favor-total {
             font-size: 1.8rem;
             font-weight: 400;
+        }
+        .heart-icon {
+            filter: brightness(0) saturate(100%) invert(69%) sepia(80%) saturate(9%) hue-rotate(332deg) brightness(102%)
+                contrast(93%);
+            &.active {
+                filter: brightness(0) saturate(100%) invert(38%) sepia(45%) saturate(2811%) hue-rotate(308deg)
+                    brightness(102%) contrast(102%);
+            }
         }
     }
     .share {

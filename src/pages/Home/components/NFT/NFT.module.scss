@@ -148,3 +148,62 @@
 .short-wrap {
     padding-bottom: 18px;
 }
+
+// Dropdown
+.wrap {
+    background-color: #212127;
+    border-radius: 10px;
+    width: 500px;
+    padding: 20px;
+    @include abs.screen(sm) {
+        width: calc(100vw - 30px);
+    }
+    .heading-drop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 10px;
+        .title {
+            font-size: 3rem;
+            font-weight: 600;
+        }
+        .icon {
+            width: 20px;
+            height: 20px;
+            object-fit: cover;
+        }
+    }
+    .info-drop {
+        margin-top: 20px;
+        font-size: 1.8rem;
+    }
+    .icons-drop {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 30px 0px;
+        .icon-wrap {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    }
+    .icon {
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
+        cursor: pointer;
+        transition: ease 0.4;
+        &:hover {
+            opacity: 0.4;
+        }
+    }
+    .icon--close {
+        padding: 10px;
+    }
+    .desc-drop {
+        font-size: 1.8rem;
+    }
+}

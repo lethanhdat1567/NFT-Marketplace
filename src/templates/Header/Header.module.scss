@@ -48,6 +48,12 @@
         width: 80%;
     }
 }
+.home {
+    @include abs.screen(xl) {
+        display: block;
+        margin-bottom: 15px;
+    }
+}
 .nav-back {
     display: none;
     padding: 10px 10px 10px 0px;

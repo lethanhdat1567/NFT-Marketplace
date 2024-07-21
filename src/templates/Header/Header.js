@@ -12,13 +12,14 @@ import { useEffect, useState } from 'react';
 import DropdownConnect from '~/layout/components/DropdownConnect';
 
 const cx = classNames.bind(styles);
-
 function Header() {
     const [showNavbar, setShowNavbar] = useState(false);
     const [toggleDropdown, setToggleDropdown] = useState(false);
     useEffect(() => {
         setToggleDropdown(false);
     }, []);
+    {
+    }
     return (
         <header className={cx('header')}>
             <div className="container">
@@ -34,9 +35,17 @@ function Header() {
                         <button onClick={() => setShowNavbar(false)} className={cx('nav-back')}>
                             {arrowLeft()}
                         </button>
-                        <Link to="/">Home</Link>
-                        <MenuItem leftIcon={collect()} title="Explore" items={['Collection', 'ArtWork']} />
+                        <Link className={cx('home')} to="/">
+                            Home
+                        </Link>
                         <MenuItem
+                            setShowNavbar={setShowNavbar}
+                            leftIcon={collect()}
+                            title="Explore"
+                            items={['Collection', 'ArtWork']}
+                        />
+                        <MenuItem
+                            setShowNavbar={setShowNavbar}
                             leftIcon={art()}
                             title="Community"
                             items={['About us', 'Artists', 'Editorial', 'FAQs', 'Blogs']}

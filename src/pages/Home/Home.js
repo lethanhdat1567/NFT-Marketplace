@@ -15,15 +15,14 @@ import Comment from './components/Comment';
 import CommentItem from '~/layout/components/CommentItem';
 import Subscribe from './components/Subscribe';
 import Slide from '~/layout/components/Slider';
+import { useState } from 'react';
+import { NFTitems } from '../../cloneData/cloneData';
 function Home() {
+    const [toggleDropdown, setToggleDropdown] = useState(false);
     return (
         <>
             <Hero />
-            <NFT>
-                <NFTcard a={imgs.b1} avatar={imgs.ava1} name="@mahbubul" banner={imgs.NFTcard1} />
-                <NFTcard a={imgs.b2} avatar={imgs.avagr2} name="@mahbubul" banner={imgs.NFTcard2} />
-                <NFTcard a={imgs.b3} avatar={imgs.ava3} name="@mahbubul" banner={imgs.NFTcard3} />
-            </NFT>
+            <NFT toggleDropdown={toggleDropdown} setToggleDropdown={setToggleDropdown}></NFT>
             <Collection>
                 <CollectCard
                     name="ALTERNATE MEDIUM SPACE"

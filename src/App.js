@@ -2,10 +2,12 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Fragment } from 'react';
 import { publicRoutes } from './routes';
 import DefaultLayout from './layout/defaultLayout';
+import ScrollToTop from './ScrollToTop';
 function App() {
     return (
-        <Router>
+        <Router basename="/NFT-Marketplace">
             <div className="App">
+                <ScrollToTop />
                 <Routes>
                     {publicRoutes.map((route, index) => {
                         let Layout = DefaultLayout;

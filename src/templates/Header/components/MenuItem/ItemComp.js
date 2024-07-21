@@ -12,8 +12,9 @@ function ItemComp({ items, leftIcon }) {
                 {items.map((item, index) => {
                     return (
                         <Link
+                            key={index}
                             className={cx('nav-link')}
-                            to={`${process.env.REACT_APP_BASE_ROOT}${item.replace(/\s+/g, '').toLowerCase()}`}
+                            to={`${process.env.REACT_APP_BASE_ROOT}/${item.replace(/\s+/g, '').toLowerCase()}`}
                         >
                             <Button leftIcon={leftIcon} className={cx('item-link')} key={index} text>
                                 {item}

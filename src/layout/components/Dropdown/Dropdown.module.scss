@@ -1,0 +1,24 @@
+.dropdown {
+    z-index: 999;
+    position: fixed;
+    inset: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: ease 0.4s;
+    &.active {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+.modal {
+    position: fixed;
+    inset: 0;
+    background-color: #000;
+    opacity: 0.4;
+}
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
